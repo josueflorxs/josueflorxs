@@ -1,0 +1,100 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaf9e2; /* Fondo verde muy claro */
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #2a7f2b; /* Verde oscuro */
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #1a5a1a 3px solid; /* Verde aún más oscuro para el borde */
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    background: #4c9a2a; /* Verde medio */
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 0;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+section {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #d1e4d4; /* Borde verde pálido */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+ul {
+    line-height: 1.8;
+}
+
+.example {
+    background: #d4f1d0; /* Verde muy claro */
+    padding: 10px;
+    border-left: 5px solid #2a7f2b; /* Verde oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px;
+}
+
+.extra-info {
+    background: #f0f8f0; /* Verde muy pálido */
+    padding: 10px;
+    border-left: 5px solid #4c9a2a; /* Verde medio */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #2a7f2b; /* Verde oscuro */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #1a5a1a; /* Verde más oscuro */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+.back-button {
+    background-color: #f44336; /* Color rojo para el botón */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+}
+.back-button:hover {
+    background-color: #d32f2f; /* Rojo más oscuro al pasar el ratón */
+}

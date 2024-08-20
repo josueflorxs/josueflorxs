@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Propiedades Mecánicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #e8f5e9; 
+            color: #333;
+        }
+        h1 {
+            color: #388e3c; 
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #388e3c; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form-group button:hover {
+            background-color: #2c6b2f; 
+        }
+        .result {
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result.green {
+            background-color: #c8e6c9; 
+            color: #388e3c; 
+        }
+        .result.red {
+            background-color: #ffcdd2; 
+            color: #d32f2f; 
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .nav-button.green {
+            background-color: #388e3c; 
+        }
+        .nav-button.red {
+            background-color: #d32f2f; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre Propiedades Mecánicas</h1>
+        <form id="surveyForm">
+             <div id="photo-gallery">
+            <center><img src="imagenes/finn.gif" alt="Imagen de Química 1" width="300" height="200"></center>
+        
+            
+        </div>
+            <div class="form-group">
+                <label>1. ¿Qué propiedad mecánica mide la resistencia de un material a la deformación permanente?</label>
+                <input type="radio" id="q1_a" name="q1" value="0" required>
+                <label for="q1_a">Elasticidad</label><br>
+                <input type="radio" id="q1_b" name="q1" value="1">
+                <label for="q1_b">Dureza</label><br>
+                <input type="radio" id="q1_c" name="q1" value="0">
+                <label for="q1_c">Tenacidad</label>
+            </div>
+
+            <div class="form-group">
+                <label>2. ¿Cuál de las siguientes describe mejor a un material tenaz?</label>
+                <input type="radio" id="q2_a" name="q2" value="0" required>
+                <label for="q2_a">Se rompe fácilmente bajo estrés</label><br>
+                <input type="radio" id="q2_b" name="q2" value="1">
+                <label for="q2_b">Absorbe energía antes de fracturarse</label><br>
+                <input type="radio" id="q2_c" name="q2" value="0">
+                <label for="q2_c">No cambia de forma al aplicar una fuerza</label>
+            </div>
+
+            <div class="form-group">
+                <label>3. ¿Qué propiedad mecánica permite a un material volver a su forma original después de la deformación?</label>
+                <input type="radio" id="q3_a" name="q3" value="1" required>
+                <label for="q3_a">Elasticidad</label><br>
+                <input type="radio" id="q3_b" name="q3" value="0">
+                <label for="q3_b">Dureza</label><br>
+                <input type="radio" id="q3_c" name="q3" value="0">
+                <label for="q3_c">Fractura</label>
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Cuál de las siguientes propiedades describe la capacidad de un material para resistir fuerzas que intentan estirarlo?</label>
+                <input type="radio" id="q4_a" name="q4" value="0" required>
+                <label for="q4_a">Dureza</label><br>
+                <input type="radio" id="q4_b" name="q4" value="0">
+                <label for="q4_b">Fractura</label><br>
+                <input type="radio" id="q4_c" name="q4" value="1">
+                <label for="q4_c">Resistencia a la tracción</label>
+            </div>
+
+            <div class="form-group">
+                <label>5. ¿Qué tipo de fractura es característica de un material que se rompe de manera abrupta sin deformarse considerablemente?</label>
+                <input type="radio" id="q5_a" name="q5" value="1" required>
+                <label for="q5_a">Frágil</label><br>
+                <input type="radio" id="q5_b" name="q5" value="0">
+                <label for="q5_b">Dúctil</label><br>
+                <input type="radio" id="q5_c" name="q5" value="0">
+                <label for="q5_c">Elástico</label>
+            </div>
+
+            <div class="form-group">
+                <label>6. La capacidad de un material para deformarse bajo estrés antes de fracturarse se denomina:</label>
+                <input type="radio" id="q6_a" name="q6" value="0" required>
+                <label for="q6_a">Elasticidad</label><br>
+                <input type="radio" id="q6_b" name="q6" value="1">
+                <label for="q6_b">Tenacidad</label><br>
+                <input type="radio" id="q6_c" name="q6" value="0">
+                <label for="q6_c">Dureza</label>
+            </div>
+
+            <div class="form-group">
+                <label>7. ¿Cuál es la propiedad mecánica que mide la resistencia a la penetración de un objeto más duro?</label>
+                <input type="radio" id="q7_a" name="q7" value="1" required>
+                <label for="q7_a">Dureza</label><br>
+                <input type="radio" id="q7_b" name="q7" value="0">
+                <label for="q7_b">Elasticidad</label><br>
+                <input type="radio" id="q7_c" name="q7" value="0">
+                <label for="q7_c">Resistencia a la tracción</label>
+            </div>
+
+            <div class="form-group">
+                <label>8. ¿Cómo se mide la resistencia a la tracción de un material?</label>
+                <input type="radio" id="q8_a" name="q8" value="0" required>
+                <label for="q8_a">Mediante la prueba de dureza</label><br>
+                <input type="radio" id="q8_b" name="q8" value="0">
+                <label for="q8_b">Mediante la prueba de elasticidad</label><br>
+                <input type="radio" id="q8_c" name="q8" value="1">
+                <label for="q8_c">Mediante la prueba de tracción</label>
+            </div>
+
+            <div class="form-group">
+                <label>9. ¿Qué propiedad mecánica se evalúa observando cómo se rompe un material bajo diferentes tipos de estrés?</label>
+                <input type="radio" id="q9_a" name="q9" value="0" required>
+                <label for="q9_a">Dureza</label><br>
+                <input type="radio" id="q9_b" name="q9" value="0">
+                <label for="q9_b">Elasticidad</label><br>
+                <input type="radio" id="q9_c" name="q9" value="1">
+                <label for="q9_c">Fractura</label>
+            </div>
+
+            <div class="form-group">
+                <label>10. ¿Cuál es un ejemplo de un material con alta tenacidad?</label>
+                <input type="radio" id="q10_a" name="q10" value="1" required>
+                <label for="q10_a">Acero</label><br>
+                <input type="radio" id="q10_b" name="q10" value="0">
+                <label for="q10_b">Vidrio</label><br>
+                <input type="radio" id="q10_c" name="q10" value="0">
+                <label for="q10_c">Cerámica</label>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="submitSurvey()">Enviar Encuesta</button>
+            </div>
+
+            <div id="result" class="result" style="display:none;"></div>
+
+            <div class="navigation-buttons">
+               
+                <button class="nav-button red" onclick="location.href='index.html'">Regresar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function submitSurvey() {
+            const form = document.getElementById('surveyForm');
+            const formData = new FormData(form);
+            let score = 0;
+
+            for (let [key, value] of formData.entries()) {
+                if (key.startsWith('q')) {
+                    score += parseInt(value);
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            if (score >= 6) {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. ¡Buen trabajo, has respondido correctamente a 6 o más preguntas!`;
+                resultDiv.className = 'result green';
+            } else {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. Has respondido correctamente a 5 o menos preguntas. Considera revisar los conceptos sobre propiedades mecánicas.`;
+                resultDiv.className = 'result red';
+            }
+        }
+    </script>
+</body>
+</html>

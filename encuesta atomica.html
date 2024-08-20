@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Estructuras Atómicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #0e3c00; 
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .question input[type="radio"], 
+        .question input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        .button.green {
+            background-color: #4CAF50; 
+        }
+        .button.green:hover {
+            background-color: #45a049; 
+        }
+        .button.red {
+            background-color: #f44336; 
+        }
+        .button.red:hover {
+            background-color: #d32f2f; 
+        }
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .result.green {
+            color: #4CAF50; 
+        }
+        .result.red {
+            color: #f44336; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encuesta sobre Estructuras Atómicas</h1>
+    </header>
+   <center> <img src="imagenes/qui.gif" alt="Imagen de Química 2" width="300" height="200"></center>
+           
+        </div>
+    <div class="container">
+        <form id="surveyForm">
+            <div class="question">
+                <h2>1. ¿Cuál es el modelo atómico que describe los electrones como nubes de probabilidad?</h2>
+                <label>
+                    <input type="radio" name="modelo_atomico" value="0">
+                    Modelo de Dalton
+                </label>
+                <label>
+                    <input type="radio" name="modelo_atomico" value="1">
+                    Modelo de Thomson
+                </label>
+                <label>
+                    <input type="radio" name="modelo_atomico" value="0">
+                    Modelo de Rutherford
+                </label>
+                <label>
+                    <input type="radio" name="modelo_atomico" value="0">
+                    Modelo de Bohr
+                </label>
+                <label>
+                    <input type="radio" name="modelo_atomico" value="2">
+                    Modelo Cuántico
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>2. ¿Qué partículas subatómicas se encuentran en el núcleo del átomo?</h2>
+                <label>
+                    <input type="checkbox" name="particulas_nucleo" value="1">
+                    Protones
+                </label>
+                <label>
+                    <input type="checkbox" name="particulas_nucleo" value="1">
+                    Neutrones
+                </label>
+                <label>
+                    <input type="checkbox" name="particulas_nucleo" value="0">
+                    Electrones
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>3. ¿Cuál de las siguientes afirmaciones describe correctamente el principio de exclusión de Pauli?</h2>
+                <label>
+                    <input type="radio" name="principio_exclusion" value="2">
+                    Dos electrones en el mismo átomo no pueden tener los mismos cuatro números cuánticos.
+                </label>
+                <label>
+                    <input type="radio" name="principio_exclusion" value="0">
+                    Los electrones llenan los orbitales de menor energía primero.
+                </label>
+                <label>
+                    <input type="radio" name="principio_exclusion" value="0">
+                    Los electrones ocupan orbitales de forma que maximicen el número de electrones con espines paralelos.
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>4. ¿Qué tipo de enlace se forma cuando dos átomos comparten electrones?</h2>
+                <label>
+                    <input type="radio" name="tipo_enlace" value="2">
+                    Enlace covalente
+                </label>
+                <label>
+                    <input type="radio" name="tipo_enlace" value="0">
+                    Enlace iónico
+                </label>
+                <label>
+                    <input type="radio" name="tipo_enlace" value="1">
+                    Enlace metálico
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>5. ¿Qué modelo atómico propone que los electrones giran alrededor del núcleo en órbitas fijas?</h2>
+                <label>
+                    <input type="radio" name="modelo_orbitas" value="0">
+                    Modelo de Dalton
+                </label>
+                <label>
+                    <input type="radio" name="modelo_orbitas" value="0">
+                    Modelo de Thomson
+                </label>
+                <label>
+                    <input type="radio" name="modelo_orbitas" value="0">
+                    Modelo de Rutherford
+                </label>
+                <label>
+                    <input type="radio" name="modelo_orbitas" value="2">
+                    Modelo de Bohr
+                </label>
+                <label>
+                    <input type="radio" name="modelo_orbitas" value="1">
+                    Modelo Cuántico
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>6. ¿Cuál es la función principal de los neutrones en el núcleo?</h2>
+                <label>
+                    <input type="radio" name="funcion_neutrones" value="1">
+                    Estabilizar el núcleo
+                </label>
+                <label>
+                    <input type="radio" name="funcion_neutrones" value="0">
+                    Transportar energía
+                </label>
+                <label>
+                    <input type="radio" name="funcion_neutrones" value="0">
+                    Crear enlaces químicos
+                </label>
+                <label>
+                    <input type="radio" name="funcion_neutrones" value="0">
+                    Formar electrones
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>7. ¿Qué principio establece que dos electrones en el mismo átomo no pueden tener los mismos cuatro números cuánticos?</h2>
+                <label>
+                    <input type="radio" name="principio_exclusion" value="2">
+                    Principio de exclusión de Pauli
+                </label>
+                <label>
+                    <input type="radio" name="principio_exclusion" value="0">
+                    Principio de Aufbau
+                </label>
+                <label>
+                    <input type="radio" name="principio_exclusion" value="0">
+                    Regla de Hund
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>8. ¿Qué tipo de enlace se forma cuando los átomos transfieren electrones?</h2>
+                <label>
+                    <input type="radio" name="tipo_enlace_transf" value="2">
+                    Enlace iónico
+                </label>
+                <label>
+                    <input type="radio" name="tipo_enlace_transf" value="0">
+                    Enlace covalente
+                </label>
+                <label>
+                    <input type="radio" name="tipo_enlace_transf" value="1">
+                    Enlace metálico
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>9. ¿Cuál es la carga de un electrón?</h2>
+                <label>
+                    <input type="radio" name="carga_electron" value="2">
+                    Negativa
+                </label>
+                <label>
+                    <input type="radio" name="carga_electron" value="0">
+                    Positiva
+                </label>
+                <label>
+                    <input type="radio" name="carga_electron" value="1">
+                    Neutra
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>10. ¿Qué es un isótopo?</h2>
+                <label>
+                    <input type="radio" name="isotopo" value="2">
+                    Átomo con el mismo número de protones pero diferente número de neutrones
+                </label>
+                <label>
+                    <input type="radio" name="isotopo" value="0">
+                    Átomo con diferente número de protones
+                </label>
+                <label>
+                    <input type="radio" name="isotopo" value="1">
+                    Átomo con diferente número de electrones
+                </label>
+            </div>
+
+            <button type="button" class="button green" onclick="submitForm()">Enviar Encuesta</button>
+            <button type="button" class="button red" onclick="window.location.href='index.html'">Regresar</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('surveyForm');
+            const formData = new FormData(form);
+            let score = 0;
+
+            const correctAnswers = {
+                modelo_atomico: "2",
+                particulas_nucleo: ["1", "1"],
+                principio_exclusion: "2",
+                tipo_enlace: "2",
+                modelo_orbitas: "2",
+                funcion_neutrones: "1",
+                principio_exclusion: "2",
+                tipo_enlace_transf: "2",
+                carga_electron: "2",
+                isotopo: "2"
+            };
+
+            // Evaluar las respuestas
+            for (let [key, value] of formData.entries()) {
+                const questionElement = document.querySelector(`input[name="${key}"][value="${value}"]`);
+                if (questionElement) {
+                    if (Array.isArray(correctAnswers[key])) {
+                        if (correctAnswers[key].includes(value)) {
+                            score += 1;
+                        }
+                    } else if (correctAnswers[key] === value) {
+                        score += 1;
+                    }
+                }
+            }
+
+            const resultElement = document.getElementById('result');
+            if (score >= 6) {
+                resultElement.textContent = `¡Tu puntuación es ${score}! ¡Excelente trabajo!`;
+                resultElement.className = 'result green';
+            } else {
+                resultElement.textContent = `Tu puntuación es ${score}. Puedes mejorar.`;
+                resultElement.className = 'result red';
+            }
+        }
+
+        function goBack() {
+            window.location.href = 'pagina_principal.html'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Características de los Materiales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4caf50; 
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            color: #0e3c00;  
+        }
+        .survey-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .survey-section h2 {
+            color: #388e3c; 
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .question input[type="radio"], .question input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .submit-button {
+            background-color: #4caf50; 
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .submit-button:hover {
+            background-color: #388e3c; 
+        }
+        .return-button {
+            background-color: #f44336; 
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .return-button:hover {
+            background-color: #c62828;  
+        }
+        .result {
+            display: none;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .result.green {
+            background-color: #d4edda; 
+            color: #155724; 
+        }
+        .result.red {
+            background-color: #f8d7da; 
+            color: #721c24; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encuesta sobre Características de los Materiales</h1>
+        <div id="photo-gallery">
+            <img src="imagenes/dex.gif" alt="Imagen de Química 1" width="300" height="200">
+           
+            
+        </div>
+    </header>
+    <div class="container">
+        <div class="survey-section">
+            <h2>Encuesta</h2>
+            <form id="survey-form">
+                <div class="question">
+                    <label for="q1">1. ¿Qué clasificación de materiales conocías antes de leer el contenido?</label>
+                    <input type="checkbox" id="q1_metales" name="q1" value="Metales">
+                    <label for="q1_metales">Metales</label><br>
+                    <input type="checkbox" id="q1_no_metales" name="q1" value="No Metales">
+                    <label for="q1_no_metales">No Metales</label><br>
+                    <input type="checkbox" id="q1_metaloides" name="q1" value="Metaloides">
+                    <label for="q1_metaloides">Metaloides</label><br>
+                    <input type="checkbox" id="q1_compuestos_organicos" name="q1" value="Compuestos Orgánicos">
+                    <label for="q1_compuestos_organicos">Compuestos Orgánicos</label><br>
+                    <input type="checkbox" id="q1_compuestos_inorganicos" name="q1" value="Compuestos Inorgánicos">
+                    <label for="q1_compuestos_inorganicos">Compuestos Inorgánicos</label><br>
+                    <input type="checkbox" id="q1_polimeros" name="q1" value="Polímeros">
+                    <label for="q1_polimeros">Polímeros</label>
+                </div>
+                <div class="question">
+                    <label for="q2">2. ¿Cuál de las siguientes características consideras más importante para la selección de un material?</label>
+                    <input type="radio" id="q2_conductividad" name="q2" value="Conductividad">
+                    <label for="q2_conductividad">Conductividad</label><br>
+                    <input type="radio" id="q2_dureza" name="q2" value="Dureza">
+                    <label for="q2_dureza">Dureza</label><br>
+                    <input type="radio" id="q2_solubilidad" name="q2" value="Solubilidad">
+                    <label for="q2_solubilidad">Solubilidad</label><br>
+                    <input type="radio" id="q2_estabilidad" name="q2" value="Estabilidad Química">
+                    <label for="q2_estabilidad">Estabilidad Química</label><br>
+                    <input type="radio" id="q2_otros" name="q2" value="Otros">
+                    <label for="q2_otros">Otros (especificar)</label>
+                    <input type="text" id="q2_otros_texto" name="q2_otros_texto" placeholder="Especificar">
+                </div>
+                <div class="question">
+                    <label for="q3">3. ¿Qué aplicación de los materiales te resulta más interesante?</label>
+                    <select id="q3" name="q3">
+                        <option value="Construcción">Construcción</option>
+                        <option value="Electrónica">Electrónica</option>
+                        <option value="Medicina">Medicina</option>
+                        <option value="Textiles">Textiles</option>
+                        <option value="Empaques">Empaques</option>
+                        <option value="Otros">Otros (especificar)</option>
+                    </select>
+                    <input type="text" id="q3_otros_texto" name="q3_otros_texto" placeholder="Especificar" style="display:none;">
+                </div>
+                <div class="question">
+                    <label for="q4">4. ¿Qué tipo de enlace químico es más común en los metales?</label>
+                    <input type="radio" id="q4_covalente" name="q4" value="Covalente">
+                    <label for="q4_covalente">Covalente</label><br>
+                    <input type="radio" id="q4_ionico" name="q4" value="Iónico">
+                    <label for="q4_ionico">Iónico</label><br>
+                    <input type="radio" id="q4_metalico" name="q4" value="Metálico">
+                    <label for="q4_metalico">Metálico</label>
+                </div>
+                <div class="question">
+                    <label for="q5">5. ¿Cuál es la principal característica de los polímeros?</label>
+                    <input type="radio" id="q5_macromoleculas" name="q5" value="Macromoléculas">
+                    <label for="q5_macromoleculas">Macromoléculas</label><br>
+                    <input type="radio" id="q5_simplest" name="q5" value="Estructura Simple">
+                    <label for="q5_simplest">Estructura Simple</label>
+                </div>
+                <div class="question">
+                    <label for="q6">6. ¿Qué propiedad afecta la velocidad de una reacción química?</label>
+                    <input type="radio" id="q6_concentracion" name="q6" value="Concentración">
+                    <label for="q6_concentracion">Concentración</label><br>
+                    <input type="radio" id="q6_temperatura" name="q6" value="Temperatura">
+                    <label for="q6_temperatura">Temperatura</label><br>
+                    <input type="radio" id="q6_presion" name="q6" value="Presión">
+                    <label for="q6_presion">Presión</label><br>
+                    <input type="radio" id="q6_todas" name="q6" value="Todas">
+                    <label for="q6_todas">Todas</label>
+                </div>
+                <div class="question">
+                    <label for="q7">7. ¿Qué tipo de reacción es la corrosión de un metal?</label>
+                    <input type="radio" id="q7_redox" name="q7" value="Redox">
+                    <label for="q7_redox">Redox</label><br>
+                    <input type="radio" id="q7_acido_base" name="q7" value="Ácido-Base">
+                    <label for="q7_acido_base">Ácido-Base</label>
+                </div>
+                <div class="question">
+                    <label for="q8">8. ¿Qué estructura de red se encuentra en los sólidos iónicos?</label>
+                    <input type="radio" id="q8_cubica" name="q8" value="Cúbica">
+                    <label for="q8_cubica">Cúbica</label><br>
+                    <input type="radio" id="q8_hexagonal" name="q8" value="Hexagonal">
+                    <label for="q8_hexagonal">Hexagonal</label><br>
+                    <input type="radio" id="q8_tetraedrica" name="q8" value="Tetraédrica">
+                    <label for="q8_tetraedrica">Tetraédrica</label>
+                </div>
+                <div class="question">
+                    <label for="q9">9. ¿Cuál es un ejemplo de un material con alta conductividad eléctrica?</label>
+                    <input type="radio" id="q9_cobre" name="q9" value="Cobre">
+                    <label for="q9_cobre">Cobre</label><br>
+                    <input type="radio" id="q9_madera" name="q9" value="Madera">
+                    <label for="q9_madera">Madera</label><br>
+                    <input type="radio" id="q9_plastico" name="q9" value="Plástico">
+                    <label for="q9_plastico">Plástico</label>
+                </div>
+                <div class="question">
+                    <label for="q10">10. ¿Qué tipo de material es el vidrio?</label>
+                    <input type="radio" id="q10_metaloide" name="q10" value="Metaloide">
+                    <label for="q10_metaloide">Metaloide</label><br>
+                    <input type="radio" id="q10_compuesto" name="q10" value="Compuesto">
+                    <label for="q10_compuesto">Compuesto</label><br>
+                    <input type="radio" id="q10_puro" name="q10" value="Puro">
+                    <label for="q10_puro">Puro</label>
+                </div>
+                <button type="button" class="submit-button" onclick="calculateResults()">Enviar Encuesta</button>
+                <button type="button" class="return-button" onclick="window.location.href='index.html'">Regresar</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Flores Islas Ángel Josué</p>
+    </footer>
+    <script>
+        function calculateResults() {
+            var score = 0;
+            var totalQuestions = 10;
+
+            // Respuestas correctas
+            var correctAnswers = {
+                "q1_metales": true,
+                "q1_no_metales": true,
+                "q1_metaloides": true,
+                "q1_compuestos_organicos": true,
+                "q1_compuestos_inorganicos": true,
+                "q1_polimeros": true,
+                "q2_conductividad": true,
+                "q2_dureza": false,
+                "q2_solubilidad": false,
+                "q2_estabilidad": false,
+                "q2_otros": false,
+                "q3": "Construcción",
+                "q4_metalico": true,
+                "q5_macromoleculas": true,
+                "q6_todas": true,
+                "q7_redox": true,
+                "q8_cubica": true,
+                "q9_cobre": true,
+                "q10_compuesto": true
+            };
+
+            
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked && correctAnswers[checkbox.id]) {
+                    score++;
+                }
+            });
+
+           
+            var radios = document.querySelectorAll('input[type="radio"]');
+            radios.forEach(function(radio) {
+                if (radio.checked && correctAnswers[radio.id]) {
+                    score++;
+                }
+            });
+
+            // Evaluar respuesta de select
+            var select = document.getElementById('q3');
+            if (select.value === correctAnswers['q3']) {
+                score++;
+            }
+
+            // Evaluar respuesta de texto
+            var textInputs = document.querySelectorAll('input[type="text"]');
+            textInputs.forEach(function(textInput) {
+                if (textInput.value === correctAnswers[textInput.id]) {
+                    score++;
+                }
+            });
+
+            var resultDiv = document.getElementById('result');
+            if (score >= 6) {
+                resultDiv.className = 'result green';
+                resultDiv.innerHTML = '¡Buen trabajo! Tu puntuación es: ' + score + '/' + totalQuestions;
+            } else {
+                resultDiv.className = 'result red';
+                resultDiv.innerHTML = 'Puedes mejorar. Tu puntuación es: ' + score + '/' + totalQuestions;
+            }
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Baterías de Litio y Sodio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #e8f5e9; 
+            color: #333;
+        }
+        h1 {
+            color: #388e3c; 
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #388e3c; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form-group button:hover {
+            background-color: #2c6b2f; 
+        }
+        .result {
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result.green {
+            background-color: #c8e6c9; 
+            color: #388e3c; 
+        }
+        .result.red {
+            background-color: #ffcdd2;
+            color: #d32f2f; 
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .nav-button.green {
+            background-color: #388e3c; 
+        }
+        .nav-button.red {
+            background-color: #d32f2f; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre Baterías de Litio y Sodio</h1>
+        <form id="surveyForm">
+
+            <div id="photo-gallery">
+                <center><img src="imagenes/baterias.gif" alt="Imagen de Fibra de Carbono" width="300" height="200"></center>
+            </div>
+            <div class="form-group">
+                <label>1. ¿Cuál de las siguientes es una ventaja principal de las baterías de litio?</label>
+                <input type="radio" id="q1_a" name="q1" value="1" required>
+                <label for="q1_a">Alta densidad de energía</label><br>
+                <input type="radio" id="q1_b" name="q1" value="0">
+                <label for="q1_b">Bajo costo de fabricación</label><br>
+                <input type="radio" id="q1_c" name="q1" value="0">
+                <label for="q1_c">Mayor tamaño</label>
+            </div>
+
+            <div class="form-group">
+                <label>2. ¿Qué caracteriza principalmente a las baterías de sodio en comparación con las de litio?</label>
+                <input type="radio" id="q2_a" name="q2" value="1" required>
+                <label for="q2_a">Menor costo debido a la abundancia de sodio</label><br>
+                <input type="radio" id="q2_b" name="q2" value="0">
+                <label for="q2_b">Mayor densidad de energía</label><br>
+                <input type="radio" id="q2_c" name="q2" value="0">
+                <label for="q2_c">Mayor duración de vida</label>
+            </div>
+
+            <div class="form-group">
+                <label>3. ¿Cuál es un uso emergente para las baterías de sodio?</label>
+                <input type="radio" id="q3_a" name="q3" value="0" required>
+                <label for="q3_a">Electrónica portátil</label><br>
+                <input type="radio" id="q3_b" name="q3" value="0">
+                <label for="q3_b">Dispositivos móviles</label><br>
+                <input type="radio" id="q3_c" name="q3" value="1">
+                <label for="q3_c">Almacenamiento a gran escala</label>
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Cuál es uno de los principales desafíos de las baterías de sodio actualmente?</label>
+                <input type="radio" id="q4_a" name="q4" value="1" required>
+                <label for="q4_a">Densidad de energía relativamente baja</label><br>
+                <input type="radio" id="q4_b" name="q4" value="0">
+                <label for="q4_b">Alta disponibilidad de sodio</label><br>
+                <input type="radio" id="q4_c" name="q4" value="0">
+                <label for="q4_c">Alta eficiencia de carga</label>
+            </div>
+
+            <div class="form-group">
+                <label>5. ¿Cuál es una ventaja de las baterías de litio en términos de vida útil?</label>
+                <input type="radio" id="q5_a" name="q5" value="1" required>
+                <label for="q5_a">Larga duración con una capacidad estable</label><br>
+                <input type="radio" id="q5_b" name="q5" value="0">
+                <label for="q5_b">Costo reducido</label><br>
+                <input type="radio" id="q5_c" name="q5" value="0">
+                <label for="q5_c">Uso de materiales abundantes</label>
+            </div>
+
+            <div class="form-group">
+                <label>6. ¿Cuál es una ventaja de las baterías de sodio en términos de sostenibilidad?</label>
+                <input type="radio" id="q6_a" name="q6" value="0" required>
+                <label for="q6_a">Uso de materiales raros</label><br>
+                <input type="radio" id="q6_b" name="q6" value="1">
+                <label for="q6_b">Menor impacto ambiental debido a la abundancia de sodio</label><br>
+                <input type="radio" id="q6_c" name="q6" value="0">
+                <label for="q6_c">Uso de metales pesados</label>
+            </div>
+
+            <div class="form-group">
+                <label>7. ¿Qué desafío importante enfrentan las baterías de sodio en comparación con las de litio?</label>
+                <input type="radio" id="q7_a" name="q7" value="1" required>
+                <label for="q7_a">Desafíos en la densidad de energía</label><br>
+                <input type="radio" id="q7_b" name="q7" value="0">
+                <label for="q7_b">Dificultades en el reciclaje</label><br>
+                <input type="radio" id="q7_c" name="q7" value="0">
+                <label for="q7_c">Abundancia de materiales</label>
+            </div>
+
+            <div class="form-group">
+                <label>8. ¿Cuál es un área de investigación activa para mejorar las baterías de sodio?</label>
+                <input type="radio" id="q8_a" name="q8" value="1" required>
+                <label for="q8_a">Mejora de la densidad de energía</label><br>
+                <input type="radio" id="q8_b" name="q8" value="0">
+                <label for="q8_b">Reducción del costo de fabricación</label><br>
+                <input type="radio" id="q8_c" name="q8" value="0">
+                <label for="q8_c">Aumento de la capacidad de carga</label>
+            </div>
+
+            <div class="form-group">
+                <label>9. ¿Qué tipo de tecnología se está desarrollando para las baterías de sodio para mejorar su rendimiento?</label>
+                <input type="radio" id="q9_a" name="q9" value="0" required>
+                <label for="q9_a">Tecnología de electrolito sólido</label><br>
+                <input type="radio" id="q9_b" name="q9" value="1">
+                <label for="q9_b">Tecnología de electrodos avanzados</label><br>
+                <input type="radio" id="q9_c" name="q9" value="0">
+                <label for="q9_c">Tecnología de baterías de estado sólido</label>
+            </div>
+
+            <div class="form-group">
+                <label>10. ¿Qué característica de las baterías de sodio puede contribuir a su adopción en aplicaciones de almacenamiento de energía a gran escala?</label>
+                <input type="radio" id="q10_a" name="q10" value="1" required>
+                <label for="q10_a">Costo reducido y disponibilidad de materiales</label><br>
+                <input type="radio" id="q10_b" name="q10" value="0">
+                <label for="q10_b">Alta densidad de energía</label><br>
+                <input type="radio" id="q10_c" name="q10" value="0">
+                <label for="q10_c">Alto costo de fabricación</label>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="submitSurvey()">Enviar Encuesta</button>
+            </div>
+
+            <div id="result" class="result" style="display:none;"></div>
+
+            <div class="navigation-buttons">
+                <button class="nav-button red" onclick="location.href='index.html'">Regresar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function submitSurvey() {
+            const form = document.getElementById('surveyForm');
+            const formData = new FormData(form);
+            let score = 0;
+
+            for (let [key, value] of formData.entries()) {
+                if (key.startsWith('q')) {
+                    score += parseInt(value);
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            if (score >= 6) {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. ¡Buen trabajo, has respondido correctamente a 6 o más preguntas sobre baterías de litio y sodio!`;
+                resultDiv.className = 'result green';
+            } else {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. Has respondido correctamente a 5 o menos preguntas. Considera revisar los conceptos sobre baterías de litio y sodio.`;
+                resultDiv.className = 'result red';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Elementos Químicos Dañinos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #e8f5e9; 
+            color: #333;
+        }
+        h1 {
+            color: #2e7d32; 
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #2e7d32; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form-group button:hover {
+            background-color: #1b5e20; 
+        }
+        .result {
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result.green {
+            background-color: #c8e6c9; 
+            color: #2e7d32; 
+        }
+        .result.red {
+            background-color: #ffcdd2;
+            color: #d32f2f; 
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .nav-button.green {
+            background-color: #2e7d32;
+        }
+        .nav-button.green:hover {
+            background-color: #1b5e20;
+        }
+        .nav-button.red {
+            background-color: #d32f2f;
+        }
+        .nav-button.red:hover {
+            background-color: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre Elementos Químicos Dañinos</h1>
+        <form id="surveyForm">
+            <div id="photo-gallery">
+                <center><img src="imagenes/humano.png" alt="Elementos Químicos" width="300" height="200"></center>
+            </div>
+            <div class="form-group">
+                <label>1. ¿Cuál de los siguientes elementos es conocido por causar daños neurológicos graves?</label>
+                <input type="radio" id="q1_a" name="q1" value="0" required>
+                <label for="q1_a">Arsénico</label><br>
+                <input type="radio" id="q1_b" name="q1" value="1">
+                <label for="q1_b">Mercurio</label><br>
+                <input type="radio" id="q1_c" name="q1" value="0">
+                <label for="q1_c">Plomo</label>
+            </div>
+
+            <div class="form-group">
+                <label>2. ¿Qué elemento químico es conocido por su presencia en baterías y su potencial toxicidad?</label>
+                <input type="radio" id="q2_a" name="q2" value="0" required>
+                <label for="q2_a">Cadmio</label><br>
+                <input type="radio" id="q2_b" name="q2" value="1">
+                <label for="q2_b">Mercurio</label><br>
+                <input type="radio" id="q2_c" name="q2" value="0">
+                <label for="q2_c">Cloro</label>
+            </div>
+
+            <div class="form-group">
+                <label>3. ¿Qué elemento se encuentra en pinturas viejas y puede causar daños graves en el sistema nervioso?</label>
+                <input type="radio" id="q3_a" name="q3" value="1" required>
+                <label for="q3_a">Plomo</label><br>
+                <input type="radio" id="q3_b" name="q3" value="0">
+                <label for="q3_b">Tálio</label><br>
+                <input type="radio" id="q3_c" name="q3" value="0">
+                <label for="q3_c">Fluor</label>
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Cuál de los siguientes elementos puede causar problemas respiratorios si se inhalan sus partículas?</label>
+                <input type="radio" id="q4_a" name="q4" value="1" required>
+                <label for="q4_a">Asbesto</label><br>
+                <input type="radio" id="q4_b" name="q4" value="0">
+                <label for="q4_b">Cloro</label><br>
+                <input type="radio" id="q4_c" name="q4" value="0">
+                <label for="q4_c">Cromo</label>
+            </div>
+
+            <div class="form-group">
+                <label>5. ¿Qué efecto puede tener la exposición prolongada al arsénico en el organismo?</label>
+                <input type="radio" id="q5_a" name="q5" value="1" required>
+                <label for="q5_a">Cáncer de piel y problemas gastrointestinales</label><br>
+                <input type="radio" id="q5_b" name="q5" value="0">
+                <label for="q5_b">Leucemia</label><br>
+                <input type="radio" id="q5_c" name="q5" value="0">
+                <label for="q5_c">Problemas respiratorios</label>
+            </div>
+
+            <div class="form-group">
+                <label>6. ¿Cuál de estos elementos es utilizado en la industria de recubrimientos metálicos y puede causar cáncer pulmonar?</label>
+                <input type="radio" id="q6_a" name="q6" value="0" required>
+                <label for="q6_a">Benceno</label><br>
+                <input type="radio" id="q6_b" name="q6" value="1">
+                <label for="q6_b">Cromo</label><br>
+                <input type="radio" id="q6_c" name="q6" value="0">
+                <label for="q6_c">Tálio</label>
+            </div>
+
+            <div class="form-group">
+                <label>7. ¿Qué elemento es conocido por su uso en desinfectantes y productos de limpieza, y puede causar irritaciones en altas concentraciones?</label>
+                <input type="radio" id="q7_a" name="q7" value="1" required>
+                <label for="q7_a">Cloro</label><br>
+                <input type="radio" id="q7_b" name="q7" value="0">
+                <label for="q7_b">Fluor</label><br>
+                <input type="radio" id="q7_c" name="q7" value="0">
+                <label for="q7_c">Cadmio</label>
+            </div>
+
+            <div class="form-group">
+                <label>8. ¿Qué elemento se encuentra en baterías y pigmentos, y es conocido por su toxicidad crónica?</label>
+                <input type="radio" id="q8_a" name="q8" value="0" required>
+                <label for="q8_a">Cadmio</label><br>
+                <input type="radio" id="q8_b" name="q8" value="0">
+                <label for="q8_b">Tálio</label><br>
+                <input type="radio" id="q8_c" name="q8" value="1">
+                <label for="q8_c">Arsénico</label>
+            </div>
+
+            <div class="form-group">
+                <label>9. ¿Cuál es la principal fuente de exposición al mercurio para la mayoría de las personas?</label>
+                <input type="radio" id="q9_a" name="q9" value="0" required>
+                <label for="q9_a">Pinturas</label><br>
+                <input type="radio" id="q9_b" name="q9" value="0">
+                <label for="q9_b">Alimentos contaminados</label><br>
+                <input type="radio" id="q9_c" name="q9" value="1">
+                <label for="q9_c">Consumo de pescado</label>
+            </div>
+
+            <div class="form-group">
+                <label>10. ¿Qué medida preventiva es importante para reducir la exposición al asbesto?</label>
+                <input type="radio" id="q10_a" name="q10" value="1" required>
+                <label for="q10_a">Uso de equipos de protección durante la remoción</label><br>
+                <input type="radio" id="q10_b" name="q10" value="0">
+                <label for="q10_b">Uso de desinfectantes</label><br>
+                <input type="radio" id="q10_c" name="q10" value="0">
+                <label for="q10_c">Consumo de pescado</label>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="calculateResults()">Enviar Encuesta</button>
+            </div>
+
+            <div class="result" id="result" style="display:none;"></div>
+        </form>
+
+        <div class="navigation-buttons">
+            
+            <button class="nav-button red" onclick="window.location.href='index.html'">REGRESAR</button>
+        </div>
+
+    </div>
+
+    <script>
+        function calculateResults() {
+            var score = 0;
+            var totalQuestions = 10;
+            for (var i = 1; i <= totalQuestions; i++) {
+                var radios = document.getElementsByName('q' + i);
+                for (var j = 0; j < radios.length; j++) {
+                    if (radios[j].checked) {
+                        score += parseInt(radios[j].value);
+                        break;
+                    }
+                }
+            }
+
+            var resultDiv = document.getElementById('result');
+            var percentage = (score / totalQuestions) * 100;
+            resultDiv.style.display = 'block';
+            if (percentage >= 80) {
+                resultDiv.innerHTML = '<p><strong>¡Excelente!</strong> Has respondido correctamente ' + score + ' de ' + totalQuestions + ' preguntas. Tu conocimiento sobre los elementos químicos dañinos es muy bueno.</p>';
+                resultDiv.className = 'result green';
+            } else {
+                resultDiv.innerHTML = '<p><strong> Ups!!</strong> Has respondido correctamente ' + score + ' de ' + totalQuestions + ' preguntas. Sigue aprendiendo sobre los elementos químicos dañinos para mejorar tu conocimiento.</p>';
+                resultDiv.className = 'result red';
+            }
+        }
+    </script>
+</body>
+</html>

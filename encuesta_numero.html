@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Número Atómico y Número de Masa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #e8f5e9; 
+            color: #333;
+        }
+        h1 {
+            color: #2e7d32; 
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #388e3c; 
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form-group button:hover {
+            background-color: #2c6b2f; 
+        }
+        .result {
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result.green {
+            background-color: #c8e6c9; 
+            color: #388e3c; 
+        }
+        .result.red {
+            background-color: #ffcdd2; 
+            color: #d32f2f; 
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .nav-button.green {
+            background-color: #388e3c; 
+        }
+        .nav-button.red {
+            background-color: #d32f2f; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre Número Atómico y Número de Masa</h1>
+        <form id="surveyForm">
+           <center> <img src="imagenes/numero.png" alt="Imagen de Estructura y Periodicidad" width="300" height="200"> </center>
+            <div class="form-group">
+                <label>1. ¿Qué representa el número atómico de un elemento?</label>
+                <input type="radio" id="q1_a" name="q1" value="1" required>
+                <label for="q1_a">El número de protones en el núcleo</label><br>
+                <input type="radio" id="q1_b" name="q1" value="0">
+                <label for="q1_b">El número de neutrones en el núcleo</label><br>
+                <input type="radio" id="q1_c" name="q1" value="0">
+                <label for="q1_c">El número total de partículas en el núcleo</label>
+            </div>
+
+            <div class="form-group">
+                <label>2. ¿Cómo se calcula el número de masa de un átomo?</label>
+                <input type="radio" id="q2_a" name="q2" value="0" required>
+                <label for="q2_a">Número de protones - Número de neutrones</label><br>
+                <input type="radio" id="q2_b" name="q2" value="1">
+                <label for="q2_b">Número de protones + Número de neutrones</label><br>
+                <input type="radio" id="q2_c" name="q2" value="0">
+                <label for="q2_c">Número de protones / Número de neutrones</label>
+            </div>
+
+            <div class="form-group">
+                <label>3. ¿Qué diferencia hay entre isótopos de un elemento?</label>
+                <input type="radio" id="q3_a" name="q3" value="0" required>
+                <label for="q3_a">Diferente número de protones</label><br>
+                <input type="radio" id="q3_b" name="q3" value="0">
+                <label for="q3_b">Diferente número de electrones</label><br>
+                <input type="radio" id="q3_c" name="q3" value="1">
+                <label for="q3_c">Diferente número de neutrones</label>
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Cuál es el número atómico del carbono?</label>
+                <input type="radio" id="q4_a" name="q4" value="1" required>
+                <label for="q4_a">6</label><br>
+                <input type="radio" id="q4_b" name="q4" value="0">
+                <label for="q4_b">12</label><br>
+                <input type="radio" id="q4_c" name="q4" value="0">
+                <label for="q4_c">14</label>
+            </div>
+
+            <div class="form-group">
+                <label>5. ¿Cómo se representa el número de masa de un átomo en la notación química?</label>
+                <input type="radio" id="q5_a" name="q5" value="0" required>
+                <label for="q5_a">Como un subíndice</label><br>
+                <input type="radio" id="q5_b" name="q5" value="1">
+                <label for="q5_b">Como un superíndice</label><br>
+                <input type="radio" id="q5_c" name="q5" value="0">
+                <label for="q5_c">En una nota al pie</label>
+            </div>
+
+            <div class="form-group">
+                <label>6. ¿Qué información adicional proporciona el número de masa respecto al número atómico?</label>
+                <input type="radio" id="q6_a" name="q6" value="1" required>
+                <label for="q6_a">El número total de partículas en el núcleo</label><br>
+                <input type="radio" id="q6_b" name="q6" value="0">
+                <label for="q6_b">La masa del átomo en unidades de masa atómica</label><br>
+                <input type="radio" id="q6_c" name="q6" value="0">
+                <label for="q6_c">El número de electrones en la órbita</label>
+            </div>
+
+            <div class="form-group">
+                <label>7. ¿Qué es un isótopo?</label>
+                <input type="radio" id="q7_a" name="q7" value="0" required>
+                <label for="q7_a">Un átomo con el mismo número atómico pero diferente número de masa</label><br>
+                <input type="radio" id="q7_b" name="q7" value="1">
+                <label for="q7_b">Un átomo con el mismo número de masa pero diferente número atómico</label><br>
+                <input type="radio" id="q7_c" name="q7" value="0">
+                <label for="q7_c">Un átomo con el mismo número de protones y neutrones</label>
+            </div>
+
+            <div class="form-group">
+                <label>8. ¿Qué determina el número de neutrones en un átomo?</label>
+                <input type="radio" id="q8_a" name="q8" value="0" required>
+                <label for="q8_a">El número atómico</label><br>
+                <input type="radio" id="q8_b" name="q8" value="1">
+                <label for="q8_b">La diferencia entre el número de masa y el número atómico</label><br>
+                <input type="radio" id="q8_c" name="q8" value="0">
+                <label for="q8_c">El número total de electrones</label>
+            </div>
+
+            <div class="form-group">
+                <label>9. ¿Qué elemento tiene el número atómico 8?</label>
+                <input type="radio" id="q9_a" name="q9" value="1" required>
+                <label for="q9_a">Oxígeno</label><br>
+                <input type="radio" id="q9_b" name="q9" value="0">
+                <label for="q9_b">Nitrógeno</label><br>
+                <input type="radio" id="q9_c" name="q9" value="0">
+                <label for="q9_c">Flúor</label>
+            </div>
+
+            <div class="form-group">
+                <label>10. ¿Cuál es el número de masa del isótopo de carbono con 6 protones y 8 neutrones?</label>
+                <input type="radio" id="q10_a" name="q10" value="0" required>
+                <label for="q10_a">12</label><br>
+                <input type="radio" id="q10_b" name="q10" value="1">
+                <label for="q10_b">14</label><br>
+                <input type="radio" id="q10_c" name="q10" value="0">
+                <label for="q10_c">16</label>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="calculateResults()">Enviar Respuestas</button>
+            </div>
+        </form>
+
+        <div id="result" class="result"></div>
+
+        <div class="navigation-buttons">
+            <button class="nav-button red" onclick="location.href='index.html'">Regresar</button>
+        </div>
+    </div>
+
+    <script>
+        function calculateResults() {
+            var score = 0;
+            var totalQuestions = 10;
+            var answers = {
+                q1: '1',
+                q2: '1',
+                q3: '1',
+                q4: '1',
+                q5: '1',
+                q6: '1',
+                q7: '1',
+                q8: '1',
+                q9: '1',
+                q10: '1'
+            };
+
+            for (var q in answers) {
+                var selected = document.querySelector('input[name="' + q + '"]:checked');
+                if (selected && selected.value === answers[q]) {
+                    score++;
+                }
+            }
+
+            var result = document.getElementById('result');
+            var percentage = (score / totalQuestions) * 100;
+
+            if (percentage >= 80) {
+                result.innerHTML = "<h2>¡Excelente!</h2><p>Has respondido correctamente el " + percentage + "% de las preguntas.</p>";
+                result.className = 'result green';
+            } else {
+                result.innerHTML = "<h2>Buen intento</h2><p>Has respondido correctamente el " + percentage + "% de las preguntas. Puedes repasar la información para mejorar.</p>";
+                result.className = 'result red';
+            }
+        }
+    </script>
+</body>
+</html>

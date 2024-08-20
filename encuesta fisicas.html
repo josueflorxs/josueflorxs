@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Propiedades Físicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f0f8f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #219f15;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #004d00;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #004d00;
+            padding-bottom: 5px;
+        }
+        .button {
+            padding: 10px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 5px;
+        }
+        .button-green {
+            background-color: #004d00;
+        }
+        .button-red {
+            background-color: #cc0000;
+        }
+        .button-green:hover {
+            background-color: #003300;
+        }
+        .button-red:hover {
+            background-color: #990000;
+        }
+        .survey-form {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .survey-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .survey-form input[type="radio"] {
+            margin-right: 10px;
+        }
+        .survey-form button {
+            background-color: #004d00;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .survey-form button:hover {
+            background-color: #003300;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            color: #ffffff;
+        }
+        .result.green {
+            background-color: #004d00;
+        }
+        .result.red {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encuesta sobre Propiedades Físicas</h1>
+    </header>
+    <main>
+        <div id="photo-gallery">
+            <center><img src="imagenes/lol.gif" alt="Imagen de Química 1" width="300" height="200"></center>
+        
+          
+        </div>
+        <div class="survey-form">
+            <h2>Por favor, responda las siguientes preguntas:</h2>
+            <form id="survey-form">
+                <div class="section">
+                    <label for="question1">1. ¿Qué propiedad física describe la cantidad de materia en un objeto?</label>
+                    <input type="radio" id="masa" name="question1" value="1">
+                    <label for="masa">Masa</label>
+                    <input type="radio" id="volumen" name="question1" value="0">
+                    <label for="volumen">Volumen</label>
+                    <input type="radio" id="peso" name="question1" value="0">
+                    <label for="peso">Peso</label>
+                </div>
+
+                <div class="section">
+                    <label for="question2">2. ¿Cuál de las siguientes es una propiedad intensiva?</label>
+                    <input type="radio" id="peso" name="question2" value="0">
+                    <label for="peso">Peso</label>
+                    <input type="radio" id="densidad" name="question2" value="1">
+                    <label for="densidad">Densidad</label>
+                    <input type="radio" id="volumen" name="question2" value="0">
+                    <label for="volumen">Volumen</label>
+                </div>
+
+                <div class="section">
+                    <label for="question3">3. ¿Qué propiedad física permite saber si un objeto flota en el agua?</label>
+                    <input type="radio" id="densidad" name="question3" value="1">
+                    <label for="densidad">Densidad</label>
+                    <input type="radio" id="punto_fusion" name="question3" value="0">
+                    <label for="punto_fusion">Punto de fusión</label>
+                    <input type="radio" id="olor" name="question3" value="0">
+                    <label for="olor">Olor</label>
+                </div>
+
+                <div class="section">
+                    <label for="question4">4. ¿Cuál es la propiedad física que describe cómo una sustancia conduce electricidad?</label>
+                    <input type="radio" id="dureza" name="question4" value="0">
+                    <label for="dureza">Dureza</label>
+                    <input type="radio" id="conductividad" name="question4" value="1">
+                    <label for="conductividad">Conductividad</label>
+                    <input type="radio" id="color" name="question4" value="0">
+                    <label for="color">Color</label>
+                </div>
+
+                <div class="section">
+                    <label for="question5">5. ¿Qué propiedad física se utiliza para determinar la pureza de un cristal?</label>
+                    <input type="radio" id="color" name="question5" value="0">
+                    <label for="color">Color</label>
+                    <input type="radio" id="dureza" name="question5" value="1">
+                    <label for="dureza">Dureza</label>
+                    <input type="radio" id="volumen" name="question5" value="0">
+                    <label for="volumen">Volumen</label>
+                </div>
+
+                <div class="section">
+                    <label for="question6">6. ¿Cuál de las siguientes propiedades se relaciona con la capacidad de una sustancia para cambiar de estado?</label>
+                    <input type="radio" id="punto_ebullicion" name="question6" value="1">
+                    <label for="punto_ebullicion">Punto de ebullición</label>
+                    <input type="radio" id="solubilidad" name="question6" value="0">
+                    <label for="solubilidad">Solubilidad</label>
+                    <input type="radio" id="color" name="question6" value="0">
+                    <label for="color">Color</label>
+                </div>
+
+                <div class="section">
+                    <label for="question7">7. ¿Qué propiedad física se mide usando la escala de Mohs?</label>
+                    <input type="radio" id="conductividad" name="question7" value="0">
+                    <label for="conductividad">Conductividad</label>
+                    <input type="radio" id="dureza" name="question7" value="1">
+                    <label for="dureza">Dureza</label>
+                    <input type="radio" id="densidad" name="question7" value="0">
+                    <label for="densidad">Densidad</label>
+                </div>
+
+                <div class="section">
+                    <label for="question8">8. ¿Qué propiedad física describe la resistencia de un material a la deformación?</label>
+                    <input type="radio" id="dureza" name="question8" value="1">
+                    <label for="dureza">Dureza</label>
+                    <input type="radio" id="densidad" name="question8" value="0">
+                    <label for="densidad">Densidad</label>
+                    <input type="radio" id="color" name="question8" value="0">
+                    <label for="color">Color</label>
+                </div>
+
+                <div class="section">
+                    <label for="question9">9. ¿Cuál propiedad física se usa para identificar líquidos que no se mezclan?</label>
+                    <input type="radio" id="densidad" name="question9" value="1">
+                    <label for="densidad">Densidad</label>
+                    <input type="radio" id="punto_fusion" name="question9" value="0">
+                    <label for="punto_fusion">Punto de fusión</label>
+                    <input type="radio" id="solubilidad" name="question9" value="0">
+                    <label for="solubilidad">Solubilidad</label>
+                </div>
+
+                <div class="section">
+                    <label for="question10">10. ¿Qué propiedad física se mide en grados Celsius en un termómetro?</label>
+                    <input type="radio" id="punto_fusion" name="question10" value="0">
+                    <label for="punto_fusion">Punto de fusión</label>
+                    <input type="radio" id="punto_ebullicion" name="question10" value="1">
+                    <label for="punto_ebullicion">Punto de ebullición</label>
+                    <input type="radio" id="densidad" name="question10" value="0">
+                    <label for="densidad">Densidad</label>
+                </div>
+
+                <button type="submit">Enviar Respuestas</button>
+            </form>
+
+            <div id="result" class="result" style="display: none;"></div>
+        </div>
+
+        <section class="section">
+         
+            <a href="index.html" class="button button-red">Regresar</a>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('survey-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let score = 0;
+            const totalQuestions = 10;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedOption = document.querySelector(`input[name="question${i}"]:checked`);
+                if (selectedOption) {
+                    score += parseInt(selectedOption.value);
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+
+            if (score >= 6) {
+                resultDiv.className = 'result green';
+                resultDiv.textContent = `¡Felicidades! Has obtenido una puntuación de ${score} sobre ${totalQuestions}. ¡Buen trabajo!`;
+            } else {
+                resultDiv.className = 'result red';
+                resultDiv.textContent = `Has obtenido una puntuación de ${score} sobre ${totalQuestions}. Sigue practicando para mejorar.`;
+            }
+        });
+    </script>
+</body>
+</html>

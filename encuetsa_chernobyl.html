@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre el Desastre de Chernobyl</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #e8f5e9; /* Verde claro */
+            color: #333;
+        }
+        h1 {
+            color: #2e7d32; /* Verde más oscuro */
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco para el contenedor */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #388e3c; /* Verde más oscuro */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form-group button:hover {
+            background-color: #2c6b2f; /* Verde aún más oscuro para hover */
+        }
+        .result {
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result.green {
+            background-color: #c8e6c9; /* Verde claro */
+            color: #388e3c; /* Verde más oscuro */
+        }
+        .result.red {
+            background-color: #ffcdd2; /* Rojo claro */
+            color: #d32f2f; /* Rojo más oscuro */
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .nav-button.green {
+            background-color: #388e3c; /* Verde más oscuro */
+        }
+        .nav-button.green:hover {
+            background-color: #2c6b2f; /* Verde aún más oscuro para hover */
+        }
+        .nav-button.red {
+            background-color: #d32f2f; /* Rojo más oscuro */
+        }
+        .nav-button.red:hover {
+            background-color: #b71c1c; /* Rojo aún más oscuro para hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre el Desastre de Chernobyl</h1>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label>1. ¿En qué fecha ocurrió el desastre de Chernobyl?</label>
+                <input type="radio" id="q1_a" name="q1" value="1" required>
+                <label for="q1_a">26 de abril de 1986</label><br>
+                <input type="radio" id="q1_b" name="q1" value="0">
+                <label for="q1_b">1 de mayo de 1986</label>
+            </div>
+
+            <div class="form-group">
+                <label>2. ¿Cuál fue la principal causa del accidente en Chernobyl?</label>
+                <input type="radio" id="q2_a" name="q2" value="1" required>
+                <label for="q2_a">Fallos de diseño y errores operativos</label><br>
+                <input type="radio" id="q2_b" name="q2" value="0">
+                <label for="q2_b">Desastres naturales</label>
+            </div>
+
+            <div class="form-group">
+                <label>3. ¿Qué tipo de reactor estaba en funcionamiento durante el desastre?</label>
+                <input type="radio" id="q3_a" name="q3" value="1" required>
+                <label for="q3_a">RBMK-1000</label><br>
+                <input type="radio" id="q3_b" name="q3" value="0">
+                <label for="q3_b">PWR</label>
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Cuál fue una de las principales consecuencias ambientales del accidente?</label>
+                <input type="radio" id="q4_a" name="q4" value="1" required>
+                <label for="q4_a">Contaminación radiactiva en Europa</label><br>
+                <input type="radio" id="q4_b" name="q4" value="0">
+                <label for="q4_b">Destrución de la capa de ozono</label>
+            </div>
+
+            <div class="form-group">
+                <label>5. ¿Qué se construyó para contener la liberación de material radiactivo tras el accidente?</label>
+                <input type="radio" id="q5_a" name="q5" value="1" required>
+                <label for="q5_a">Un sarcófago de concreto</label><br>
+                <input type="radio" id="q5_b" name="q5" value="0">
+                <label for="q5_b">Un campo de almacenamiento</label>
+            </div>
+
+            <div class="form-group">
+                <label>6. ¿Qué impacto tuvo el accidente en la población local de Prípiat?</label>
+                <input type="radio" id="q6_a" name="q6" value="1" required>
+                <label for="q6_a">Evacuación de la ciudad</label><br>
+                <input type="radio" id="q6_b" name="q6" value="0">
+                <label for="q6_b">Incremento de la población</label>
+            </div>
+
+            <div class="form-group">
+                <label>7. ¿Qué tipo de radiación fue liberada durante el desastre?</label>
+                <input type="radio" id="q7_a" name="q7" value="1" required>
+                <label for="q7_a">Radiación gamma y beta</label><br>
+                <input type="radio" id="q7_b" name="q7" value="0">
+                <label for="q7_b">Radiación alfa exclusivamente</label>
+            </div>
+
+            <div class="form-group">
+                <label>8. ¿Cómo afectó el desastre a los trabajadores de la planta?</label>
+                <input type="radio" id="q8_a" name="q8" value="1" required>
+                <label for="q8_a">Causó numerosos casos de enfermedad por radiación</label><br>
+                <input type="radio" id="q8_b" name="q8" value="0">
+                <label for="q8_b">No tuvo efectos significativos en su salud</label>
+            </div>
+
+            <div class="form-group">
+                <label>9. ¿Qué medidas se han tomado a nivel internacional tras el desastre?</label>
+                <input type="radio" id="q9_a" name="q9" value="1" required>
+                <label for="q9_a">Revisión de normas de seguridad nuclear</label><br>
+                <input type="radio" id="q9_b" name="q9" value="0">
+                <label for="q9_b">Reducción de la cooperación internacional</label>
+            </div>
+
+            <div class="form-group">
+                <label>10. ¿Qué área alrededor de Chernobyl permanece deshabitada debido a la radiación?</label>
+                <input type="radio" id="q10_a" name="q10" value="1" required>
+                <label for="q10_a">La Zona de Exclusión</label><br>
+                <input type="radio" id="q10_b" name="q10" value="0">
+                <label for="q10_b">La Zona de Seguridad</label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enviar Respuestas</button>
+            </div>
+        </form>
+        <div class="result" id="result" style="display:none;"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button red" onclick="location.href='index.html'">Regresar</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Respuestas correctas (esto debe ajustarse según las respuestas correctas reales)
+            let correctAnswers = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+            let userAnswers = [];
+            let formElements = document.querySelectorAll('input[type="radio"]:checked');
+            
+            formElements.forEach(element => {
+                userAnswers.push(parseInt(element.value));
+            });
+            
+            let score = userAnswers.reduce((total, answer, index) => total + (answer === correctAnswers[index] ? 1 : 0), 0);
+            let resultText = `Has obtenido ${score} de 10 respuestas correctas.`;
+            let resultClass = score >= 8 ? 'green' : 'red';
+            
+            let resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.className = `result ${resultClass}`;
+            resultDiv.innerHTML = resultText;
+        });
+    </script>
+</body>
+</html>

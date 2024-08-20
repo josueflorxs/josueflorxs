@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre la Estructura de Lewis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #e8f5e9; 
+            color: #333;
+        }
+        h1 {
+            color: #2e7d32;         }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #388e3c; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form-group button:hover {
+            background-color: #2c6b2f; 
+        }
+        .result {
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result.green {
+            background-color: #c8e6c9; 
+            color: #388e3c; 
+        .result.red {
+            background-color: #ffcdd2; 
+            color: #d32f2f; 
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .nav-button.green {
+            background-color: #388e3c; 
+        }
+        .nav-button.red {
+            background-color: #d32f2f; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre la Estructura de Lewis</h1>
+        <form id="surveyForm">
+             <center><img src="imagenes/lewis.gif" alt="Imagen de Estructura y Periodicidad" width="300" height="200"> </center>
+            <div class="form-group">
+                <label>1. ¿Qué representa un punto en un diagrama de Lewis?</label>
+                <input type="radio" id="q1_a" name="q1" value="1" required>
+                <label for="q1_a">Un electrón de valencia</label><br>
+                <input type="radio" id="q1_b" name="q1" value="0">
+                <label for="q1_b">Un enlace covalente</label>
+            </div>
+            <div class="form-group">
+                <label>2. ¿Cómo se representa un enlace covalente en un diagrama de Lewis?</label>
+                <input type="radio" id="q2_a" name="q2" value="1" required>
+                <label for="q2_a">Con una línea</label><br>
+                <input type="radio" id="q2_b" name="q2" value="0">
+                <label for="q2_b">Con puntos alrededor de los átomos</label>
+            </div>
+            <div class="form-group">
+                <label>3. ¿Qué se busca al distribuir los electrones en un diagrama de Lewis?</label>
+                <input type="radio" id="q3_a" name="q3" value="1" required>
+                <label for="q3_a">Completar el octeto de cada átomo</label><br>
+                <input type="radio" id="q3_b" name="q3" value="0">
+                <label for="q3_b">Asegurar que cada átomo tenga dos enlaces</label>
+            </div>
+            <div class="form-group">
+                <label>4. ¿Cuál es el primer paso para dibujar un diagrama de Lewis?</label>
+                <input type="radio" id="q4_a" name="q4" value="1" required>
+                <label for="q4_a">Contar el número total de electrones de valencia</label><br>
+                <input type="radio" id="q4_b" name="q4" value="0">
+                <label for="q4_b">Colocar los átomos en el orden de enlace</label>
+            </div>
+            <div class="form-group">
+                <label>5. ¿Qué haces si un átomo en un diagrama de Lewis no cumple con el octeto?</label>
+                <input type="radio" id="q5_a" name="q5" value="1" required>
+                <label for="q5_a">Formas enlaces dobles o triples</label><br>
+                <input type="radio" id="q5_b" name="q5" value="0">
+                <label for="q5_b">Agregas electrones adicionales alrededor del átomo</label>
+            </div>
+            <div class="form-group">
+                <label>6. ¿Cómo afecta la estructura de Lewis a la forma de una molécula?</label>
+                <input type="radio" id="q6_a" name="q6" value="1" required>
+                <label for="q6_a">Influye en la disposición espacial de los átomos</label><br>
+                <input type="radio" id="q6_b" name="q6" value="0">
+                <label for="q6_b">No tiene impacto en la forma molecular</label>
+            </div>
+            <div class="form-group">
+                <label>7. ¿Cuál es el propósito de los pares libres de electrones en un diagrama de Lewis?</label>
+                <input type="radio" id="q7_a" name="q7" value="1" required>
+                <label for="q7_a">Mostrar los electrones no compartidos</label><br>
+                <input type="radio" id="q7_b" name="q7" value="0">
+                <label for="q7_b">Indicar la carga del ion</label>
+            </div>
+            <div class="form-group">
+                <label>8. ¿Qué se representa con una línea en un diagrama de Lewis?</label>
+                <input type="radio" id="q8_a" name="q8" value="1" required>
+                <label for="q8_a">Un enlace covalente simple</label><br>
+                <input type="radio" id="q8_b" name="q8" value="0">
+                <label for="q8_b">Un par de electrones libres</label>
+            </div>
+            <div class="form-group">
+                <label>9. ¿Cuál es la importancia de la estructura de Lewis en la química?</label>
+                <input type="radio" id="q9_a" name="q9" value="1" required>
+                <label for="q9_a">Ayuda a predecir la forma y la polaridad de las moléculas</label><br>
+                <input type="radio" id="q9_b" name="q9" value="0">
+                <label for="q9_b">Solo se usa para representar cargas iónicas</label>
+            </div>
+            <div class="form-group">
+                <label>10. ¿Qué información adicional se puede obtener de la estructura de Lewis además de los enlaces?</label>
+                <input type="radio" id="q10_a" name="q10" value="1" required>
+                <label for="q10_a">La distribución de electrones no enlazados</label><br>
+                <input type="radio" id="q10_b" name="q10" value="0">
+                <label for="q10_b">La masa molecular total</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar Respuestas</button>
+            </div>
+        </form>
+        <div class="result green" id="result" style="display:none;"></div>
+        <div class="navigation-buttons">
+            <button class="nav-button red" onclick="location.href='index.html'">Regresar</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Evaluar respuestas (esto es un ejemplo, deberías ajustar según tus respuestas correctas)
+            let correctAnswers = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+            let userAnswers = [];
+            let formElements = document.querySelectorAll('input[type="radio"]:checked');
+            
+            formElements.forEach(element => {
+                userAnswers.push(parseInt(element.value));
+            });
+            
+            let score = userAnswers.reduce((total, answer, index) => total + (answer === correctAnswers[index] ? 1 : 0), 0);
+            let resultText = `Has obtenido ${score} de 10 respuestas correctas.`;
+            
+            let resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = resultText;
+        });
+    </script>
+</body>
+</html>

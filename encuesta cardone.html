@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Grant Cardone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f0f4f7; 
+            color: #333;
+        }
+        h1 {
+            color: #007bff; 
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #28a745; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form-group button:hover {
+            background-color: #218838; 
+        }
+        .result {
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result.green {
+            background-color: #d4edda; 
+            color: #155724; 
+        }
+        .result.red {
+            background-color: #f8d7da; 
+            color: #721c24; 
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .nav-button.green {
+            background-color: #28a745; 
+        }
+        .nav-button.red {
+            background-color: #dc3545; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre Grant Cardone</h1>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label>1. ¿En qué fecha nació Grant Cardone?</label>
+                <input type="radio" id="q1_a" name="q1" value="1" required>
+                <label for="q1_a">21 de marzo de 1958</label><br>
+                <input type="radio" id="q1_b" name="q1" value="0">
+                <label for="q1_b">15 de abril de 1960</label><br>
+                <input type="radio" id="q1_c" name="q1" value="0">
+                <label for="q1_c">10 de enero de 1970</label>
+            </div>
+
+            <div class="form-group">
+                <label>2. ¿Cuál es el título de uno de los libros más conocidos de Grant Cardone?</label>
+                <input type="radio" id="q2_a" name="q2" value="1" required>
+                <label for="q2_a">The 10X Rule</label><br>
+                <input type="radio" id="q2_b" name="q2" value="0">
+                <label for="q2_b">The Art of War</label><br>
+                <input type="radio" id="q2_c" name="q2" value="0">
+                <label for="q2_c">How to Win Friends and Influence People</label>
+            </div>
+
+            <div class="form-group">
+                <label>3. ¿Qué empresa fundó Grant Cardone para invertir en bienes raíces?</label>
+                <input type="radio" id="q3_a" name="q3" value="1" required>
+                <label for="q3_a">Cardone Capital</label><br>
+                <input type="radio" id="q3_b" name="q3" value="0">
+                <label for="q3_b">Cardone Ventures</label><br>
+                <input type="radio" id="q3_c" name="q3" value="0">
+                <label for="q3_c">Cardone Holdings</label>
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Cuál es la filosofía principal del método 10X de Grant Cardone?</label>
+                <input type="radio" id="q4_a" name="q4" value="0" required>
+                <label for="q4_a">Establecer metas bajas y alcanzables</label><br>
+                <input type="radio" id="q4_b" name="q4" value="0">
+                <label for="q4_b">Tomar acciones mínimas</label><br>
+                <input type="radio" id="q4_c" name="q4" value="1">
+                <label for="q4_c">Establecer metas diez veces mayores y tomar acciones diez veces más grandes</label>
+            </div>
+
+            <div class="form-group">
+                <label>5. ¿Cuál es uno de los temas centrales en el libro "Sell or Be Sold"?</label>
+                <input type="radio" id="q5_a" name="q5" value="1" required>
+                <label for="q5_a">La importancia de la venta y la negociación</label><br>
+                <input type="radio" id="q5_b" name="q5" value="0">
+                <label for="q5_b">Cómo administrar el tiempo</label><br>
+                <input type="radio" id="q5_c" name="q5" value="0">
+                <label for="q5_c">Estrategias de inversión en bienes raíces</label>
+            </div>
+
+            <div class="form-group">
+                <label>6. ¿Qué tipo de eventos y seminarios realiza Grant Cardone?</label>
+                <input type="radio" id="q6_a" name="q6" value="0" required>
+                <label for="q6_a">Seminarios sobre jardinería</label><br>
+                <input type="radio" id="q6_b" name="q6" value="1">
+                <label for="q6_b">Seminarios de motivación y ventas</label><br>
+                <input type="radio" id="q6_c" name="q6" value="0">
+                <label for="q6_c">Cursos de cocina</label>
+            </div>
+
+            <div class="form-group">
+                <label>7. ¿Qué estrategia utiliza Grant Cardone para superar desafíos?</label>
+                <input type="radio" id="q7_a" name="q7" value="0" required>
+                <label for="q7_a">Evitar enfrentar problemas</label><br>
+                <input type="radio" id="q7_b" name="q7" value="1">
+                <label for="q7_b">Enfrentar los desafíos con una actitud positiva y persistente</label><br>
+                <input type="radio" id="q7_c" name="q7" value="0">
+                <label for="q7_c">Rechazar las oportunidades de riesgo</label>
+            </div>
+
+            <div class="form-group">
+                <label>8. ¿Qué tipo de inversiones son el foco principal de Cardone Capital?</label>
+                <input type="radio" id="q8_a" name="q8" value="1" required>
+                <label for="q8_a">Bienes raíces</label><br>
+                <input type="radio" id="q8_b" name="q8" value="0">
+                <label for="q8_b">Acciones tecnológicas</label><br>
+                <input type="radio" id="q8_c" name="q8" value="0">
+                <label for="q8_c">Startups de tecnología</label>
+            </div>
+
+            <div class="form-group">
+                <label>9. ¿Cuál es uno de los objetivos del método 10X según Grant Cardone?</label>
+                <input type="radio" id="q9_a" name="q9" value="0" required>
+                <label for="q9_a">Mantener las expectativas bajas</label><br>
+                <input type="radio" id="q9_b" name="q9" value="1">
+                <label for="q9_b">Aumentar las metas y el esfuerzo diez veces más allá de lo habitual</label><br>
+                <input type="radio" id="q9_c" name="q9" value="0">
+                <label for="q9_c">Reducir el esfuerzo para alcanzar metas modestas</label>
+            </div>
+
+            <div class="form-group">
+                <label>10. ¿Qué aspecto de la venta se enfatiza en "Sell or Be Sold"?</label>
+                <input type="radio" id="q10_a" name="q10" value="0" required>
+                <label for="q10_a">Estrategias de marketing digital</label><br>
+                <input type="radio" id="q10_b" name="q10" value="1">
+                <label for="q10_b">Técnicas de persuasión y cierre de ventas</label><br>
+                <input type="radio" id="q10_c" name="q10" value="0">
+                <label for="q10_c">Uso de redes sociales en la venta</label>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="submitSurvey()">Enviar Encuesta</button>
+            </div>
+
+            <div id="result" class="result" style="display:none;"></div>
+
+            <div class="navigation-buttons">
+                
+                <button class="nav-button red" onclick="location.href='index.html'">Regresar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function submitSurvey() {
+            const form = document.getElementById('surveyForm');
+            const formData = new FormData(form);
+            let score = 0;
+
+            for (let [key, value] of formData.entries()) {
+                if (key.startsWith('q')) {
+                    score += parseInt(value);
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            if (score >= 6) {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. ¡Buen trabajo, has respondido correctamente a 6 o más preguntas!`;
+                resultDiv.className = 'result green';
+            } else {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. Has respondido correctamente a 5 o menos preguntas. Considera revisar la información sobre Grant Cardone.`;
+                resultDiv.className = 'result red';
+            }
+        }
+    </script>
+</body>
+</html>

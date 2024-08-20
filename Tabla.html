@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tabla Periódica y Reacciones Químicas</title>
+    
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9; 
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #4caf50; 
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #fff 3px solid;
+            text-align: center;
+        }
+        h1, h2 {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            background: #388e3c; 
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 0;
+        }
+        section {
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        ul {
+            line-height: 1.8;
+        }
+        .example {
+            background: #e0e0e0;
+            padding: 10px;
+            border-left: 3px solid #333;
+        }
+        .extra-info {
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 3px solid #666;
+            margin-top: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #4caf50; 
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #388e3c; 
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #f44336; 
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #d32f2f; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tabla Periódica y Reacciones Químicas</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Conceptos Clave de la Tabla Periódica</h2>
+            <h3>Elementos Químicos</h3>
+            <p>Sustancias puras que no se pueden descomponer en otras más simples mediante reacciones químicas. Cada elemento está definido por el número de protones en su núcleo, conocido como número atómico.</p>
+
+            <h3>Grupos y Períodos</h3>
+            <ul>
+                <li><strong>Grupos:</strong> Columnas verticales en la tabla periódica. Los elementos dentro de un grupo tienen propiedades químicas similares. Ejemplo: Grupo 1 (Metales Alcalinos).</li>
+                <li><strong>Períodos:</strong> Filas horizontales. Cada período comienza con un metal alcalino y termina con un gas noble.</li>
+            </ul>
+
+            <h3>Metales, No Metales y Metaloides</h3>
+            <ul>
+                <li><strong>Metales:</strong> Buenos conductores de electricidad y calor, maleables y dúctiles. Ejemplo: hierro (Fe).</li>
+                <li><strong>No Metales:</strong> Menos conductores, pueden ser gaseosos, líquidos o sólidos frágiles. Ejemplo: oxígeno (O).</li>
+                <li><strong>Metaloides:</strong> Tienen propiedades intermedias entre metales y no metales. Ejemplo: silicio (Si), utilizado en la industria electrónica.</li>
+            </ul>
+
+            <h3>Estados de Oxidación</h3>
+            <p>Los estados de oxidación indican el número de electrones que un átomo puede ganar, perder o compartir al formar compuestos químicos. Estos valores ayudan a predecir la reactividad y el tipo de compuestos que un elemento puede formar.</p>
+
+            <h3>Electronegatividad</h3>
+            <p>La electronegatividad es la tendencia de un átomo a atraer electrones en una molécula. Los elementos con alta electronegatividad, como el flúor, son más propensos a atraer electrones que los elementos con baja electronegatividad.</p>
+        </section>
+
+        <section>
+            <h2>Reacciones Químicas</h2>
+            <h3>Reacciones de Síntesis (o Combinación)</h3>
+            <p>En una reacción de síntesis, dos o más sustancias se combinan para formar un solo producto. Estas reacciones son fundamentales para la formación de compuestos complejos.</p>
+            <div class="example">2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O (formación de agua a partir de hidrógeno y oxígeno).</div>
+            <div class="extra-info">
+                Las reacciones de síntesis son comunes en la naturaleza y en la industria, como en la formación de proteínas a partir de aminoácidos.
+            </div>
+
+            <h3>Reacciones de Descomposición</h3>
+            <p>En las reacciones de descomposición, un solo compuesto se descompone en dos o más sustancias. Estas reacciones son importantes en procesos como la descomposición de materia orgánica.</p>
+            <div class="example">2H<sub>2</sub>O → 2H<sub>2</sub> + O<sub>2</sub> (descomposición del agua en hidrógeno y oxígeno).</div>
+            <div class="extra-info">
+                La descomposición térmica de compuestos como el clorato de potasio produce oxígeno y es utilizada en la industria química.
+            </div>
+
+            <h3>Reacciones de Sustitución</h3>
+            <p>En las reacciones de sustitución, un elemento reemplaza a otro en un compuesto. Estas reacciones son típicas en procesos de reemplazo de metales o de sustitución en soluciones.</p>
+            <div class="example">Zn + 2HCl → ZnCl<sub>2</sub> + H<sub>2</sub> (zinc reemplaza al hidrógeno en ácido clorhídrico).</div>
+            <div class="extra-info">
+                Las reacciones de sustitución se usan en la extracción de metales y en la síntesis de compuestos orgánicos.
+            </div>
+
+            <h3>Reacciones de Doble Desplazamiento (o Doble Sustitución)</h3>
+            <p>En estas reacciones, los iones de dos compuestos intercambian lugares para formar dos nuevos compuestos. Son comunes en reacciones de precipitación y en procesos de neutralización.</p>
+            <div class="example">AgNO<sub>3</sub> + NaCl → AgCl + NaNO<sub>3</sub> (nitrato de plata reacciona con cloruro de sodio).</div>
+            <div class="extra-info">
+                La formación de precipitados es un tipo de reacción de doble desplazamiento que se utiliza en análisis químicos.
+            </div>
+
+            <h3>Reacciones Redox (Oxidorreducción)</h3>
+            <p>Las reacciones redox involucran la transferencia de electrones entre dos sustancias. Uno de los reactivos se oxida (pierde electrones) y el otro se reduce (gana electrones). Estas reacciones son clave en procesos como la respiración celular y la corrosión.</p>
+            <div class="example">CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O (combustión del metano).</div>
+            <div class="extra-info">
+                Las pilas y baterías funcionan mediante reacciones redox, donde la energía química se convierte en energía eléctrica.
+            </div>
+
+            <h3>Reacciones Ácido-Base</h3>
+            <p>En una reacción ácido-base, un ácido reacciona con una base para formar agua y una sal. Este tipo de reacción es fundamental en la química del equilibrio y en la regulación del pH en soluciones.</p>
+            <div class="example">HCl + NaOH → NaCl + H<sub>2</sub>O (ácido clorhídrico reacciona con hidróxido de sodio).</div>
+            <div class="extra-info">
+                Las reacciones ácido-base se utilizan en la neutralización de ácidos y bases, como en los antiácidos.
+            </div>
+
+            <h3>Reacciones de Combustión</h3>
+            <p>En una reacción de combustión, un compuesto reacciona con oxígeno para producir dióxido de carbono, agua y energía en forma de calor. Estas reacciones son cruciales para la generación de energía y en muchos procesos biológicos y industriales.</p>
+            <div class="example">CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O (combustión del metano).</div>
+            <div class="extra-info">
+                La combustión completa produce dióxido de carbono y agua, mientras que una combustión incompleta puede producir monóxido de carbono y otros productos.
+            </div>
+        </section>
+
+        <section>
+            <a href="encuesta2.html" class="button">Participa en la Encuesta</a>
+        </section>
+    </div>
+
+    <a href="index.html" class="back-button">Regresar</a>
+    <footer>
+        <p>&copy; Flores Islas Ángel Josué</p>
+    </footer>
+
+</body>
+</html>

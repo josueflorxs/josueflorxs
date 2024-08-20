@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Elementos Químicos en la Industria y Electrónica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #e8f5e9;
+            color: #333;
+        }
+        h1 {
+            color: #2e7d32;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group input[type="button"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            background-color: #2e7d32;
+        }
+        .form-group input[type="button"]:hover {
+            background-color: #1b5e20;
+        }
+        .result {
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result.green {
+            background-color: #c8e6c9;
+            color: #2e7d32;
+        }
+        .result.red {
+            background-color: #ffcdd2;
+            color: #d32f2f;
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .nav-button.green {
+            background-color: #2e7d32;
+        }
+        .nav-button.green:hover {
+            background-color: #1b5e20;
+        }
+        .nav-button.red {
+            background-color: #d32f2f;
+        }
+        .nav-button.red:hover {
+            background-color: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre Elementos Químicos en la Industria y Electrónica</h1>
+        <form id="surveyForm">
+            <div id="photo-gallery">
+                <center><img src="imagenes/industria.png" alt="Elementos Químicos" width="300" height="200"></center>
+            </div>
+            <div class="form-group">
+                <label>1. ¿Cuál de los siguientes elementos es más crucial para la fabricación de microprocesadores?</label>
+                <input type="radio" id="silicio1" name="question1" value="1">
+                <label for="silicio1">Silicio</label><br>
+                <input type="radio" id="cobre1" name="question1" value="0">
+                <label for="cobre1">Cobre</label>
+            </div>
+
+            <div class="form-group">
+                <label>2. ¿Qué elemento se utiliza principalmente en la fabricación de baterías recargables?</label>
+                <input type="radio" id="litio2" name="question2" value="1">
+                <label for="litio2">Litio</label><br>
+                <input type="radio" id="oro2" name="question2" value="0">
+                <label for="oro2">Oro</label>
+            </div>
+
+            <div class="form-group">
+                <label>3. ¿Cuál de los siguientes elementos se usa en catalizadores de automóviles?</label>
+                <input type="radio" id="platino3" name="question3" value="1">
+                <label for="platino3">Platino</label><br>
+                <input type="radio" id="cobre3" name="question3" value="0">
+                <label for="cobre3">Cobre</label>
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Qué elemento se utiliza en la fabricación de paneles solares?</label>
+                <input type="radio" id="silicio4" name="question4" value="1">
+                <label for="silicio4">Silicio</label><br>
+                <input type="radio" id="aluminio4" name="question4" value="0">
+                <label for="aluminio4">Aluminio</label>
+            </div>
+
+            <div class="form-group">
+                <label>5. ¿Qué elemento es conocido por su uso en imanes de alta potencia?</label>
+                <input type="radio" id="neodimio5" name="question5" value="1">
+                <label for="neodimio5">Neodimio</label><br>
+                <input type="radio" id="cobalto5" name="question5" value="0">
+                <label for="cobalto5">Cobalto</label>
+            </div>
+
+            <div class="form-group">
+                <label>6. ¿Qué metal es esencial para la transmisión de electricidad en cables?</label>
+                <input type="radio" id="cobre6" name="question6" value="1">
+                <label for="cobre6">Cobre</label><br>
+                <input type="radio" id="plata6" name="question6" value="0">
+                <label for="plata6">Plata</label>
+            </div>
+
+            <div class="form-group">
+                <label>7. ¿Qué elemento se usa para fabricar componentes electrónicos de alta fiabilidad?</label>
+                <input type="radio" id="tantalio7" name="question7" value="1">
+                <label for="tantalio7">Tantalio</label><br>
+                <input type="radio" id="plata7" name="question7" value="0">
+                <label for="plata7">Plata</label>
+            </div>
+
+            <div class="form-group">
+                <label>8. ¿Cuál de los siguientes elementos es utilizado para la fabricación de pantallas LCD?</label>
+                <input type="radio" id="indio8" name="question8" value="1">
+                <label for="indio8">Indio</label><br>
+                <input type="radio" id="neodimio8" name="question8" value="0">
+                <label for="neodimio8">Neodimio</label>
+            </div>
+
+            <div class="form-group">
+                <label>9. ¿Qué elemento es utilizado en los recubrimientos de alta resistencia para herramientas de corte?</label>
+                <input type="radio" id="tungsteno9" name="question9" value="1">
+                <label for="tungsteno9">Tungsteno</label><br>
+                <input type="radio" id="hierro9" name="question9" value="0">
+                <label for="hierro9">Hierro</label>
+            </div>
+
+            <div class="form-group">
+                <label>10. ¿Qué elemento se utiliza en la producción de fibras ópticas?</label>
+                <input type="radio" id="silicio10" name="question10" value="1">
+                <label for="silicio10">Silicio</label><br>
+                <input type="radio" id="boro10" name="question10" value="0">
+                <label for="boro10">Boro</label>
+            </div>
+
+            <div class="form-group">
+                <input type="button" value="Enviar Encuesta" onclick="submitSurvey()">
+            </div>
+
+            <div id="result" class="result" style="display:none;"></div>
+
+            
+        </form>
+         <div class="navigation-buttons">
+            <button class="nav-button red" onclick="window.location.href='index.html'">Regresar</button>
+    </div>
+
+    <script>
+        function submitSurvey() {
+            const form = document.getElementById('surveyForm');
+            const formData = new FormData(form);
+            let score = 0;
+
+            for (let [key, value] of formData.entries()) {
+                if (key.startsWith('question')) {
+                    score += parseInt(value);
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            if (score >=6) {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. ¡Buen trabajo, has respondido correctamente a 6 o más preguntas!`;
+                resultDiv.className = 'result green';
+            } else {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. Has respondido correctamente a 5 o menos preguntas. Considera revisar los conceptos sobre los elementos químicos en la industria y la electrónica.`;
+                resultDiv.className = 'result red';
+            }
+        }
+    </script>
+</body>
+</html>
+
+

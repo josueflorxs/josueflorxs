@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Fibra de Carbono</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #e8f5e9; 
+            color: #333;
+        }
+        h1 {
+            color: #388e3c; 
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #388e3c; 
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form-group button:hover {
+            background-color: #2c6b2f; 
+        }
+        .result {
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result.green {
+            background-color: #c8e6c9; 
+            color: #388e3c; 
+        }
+        .result.red {
+            background-color: #ffcdd2;
+            color: #d32f2f; 
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .nav-button.green {
+            background-color: #388e3c; 
+        }
+        .nav-button.red {
+            background-color: #d32f2f; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre Fibra de Carbono</h1>
+        <form id="surveyForm">
+            <div id="photo-gallery">
+                <center><img src="imagenes/fibra.gif" alt="Imagen de Fibra de Carbono" width="300" height="200"></center>
+            </div>
+            <div class="form-group">
+                <label>1. ¿Cuál es una de las principales propiedades de la fibra de carbono?</label>
+                <input type="radio" id="q1_a" name="q1" value="1" required>
+                <label for="q1_a">Alta resistencia y ligereza</label><br>
+                <input type="radio" id="q1_b" name="q1" value="0">
+                <label for="q1_b">Baja resistencia y alta densidad</label><br>
+                <input type="radio" id="q1_c" name="q1" value="0">
+                <label for="q1_c">Alta elasticidad y flexibilidad</label>
+            </div>
+
+            <div class="form-group">
+                <label>2. ¿En qué proceso se convierte la fibra de poliacrilonitrilo (PAN) en fibra de carbono?</label>
+                <input type="radio" id="q2_a" name="q2" value="1" required>
+                <label for="q2_a">Carbonización</label><br>
+                <input type="radio" id="q2_b" name="q2" value="0">
+                <label for="q2_b">Oxidación</label><br>
+                <input type="radio" id="q2_c" name="q2" value="0">
+                <label for="q2_c">Curado</label>
+            </div>
+
+            <div class="form-group">
+                <label>3. ¿Qué propiedad de la fibra de carbono la hace ideal para aplicaciones en aeronaves?</label>
+                <input type="radio" id="q3_a" name="q3" value="1" required>
+                <label for="q3_a">Ligereza</label><br>
+                <input type="radio" id="q3_b" name="q3" value="0">
+                <label for="q3_b">Alta densidad</label><br>
+                <input type="radio" id="q3_c" name="q3" value="0">
+                <label for="q3_c">Flexibilidad</label>
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Cuál es uno de los principales desafíos de la fibra de carbono?</label>
+                <input type="radio" id="q4_a" name="q4" value="0" required>
+                <label for="q4_a">Costo alto</label><br>
+                <input type="radio" id="q4_b" name="q4" value="1">
+                <label for="q4_b">Reparación difícil</label><br>
+                <input type="radio" id="q4_c" name="q4" value="0">
+                <label for="q4_c">Baja resistencia a la corrosión</label>
+            </div>
+
+            <div class="form-group">
+                <label>5. ¿En qué tipo de aplicaciones es común el uso de fibra de carbono?</label>
+                <input type="radio" id="q5_a" name="q5" value="0" required>
+                <label for="q5_a">Construcción de edificios</label><br>
+                <input type="radio" id="q5_b" name="q5" value="1">
+                <label for="q5_b">Equipamiento deportivo</label><br>
+                <input type="radio" id="q5_c" name="q5" value="0">
+                <label for="q5_c">Mobiliario urbano</label>
+            </div>
+
+            <div class="form-group">
+                <label>6. ¿Cuál es uno de los beneficios de usar fibra de carbono en el sector automotriz?</label>
+                <input type="radio" id="q6_a" name="q6" value="1" required>
+                <label for="q6_a">Reducción de peso</label><br>
+                <input type="radio" id="q6_b" name="q6" value="0">
+                <label for="q6_b">Aumento de la resistencia al impacto</label><br>
+                <input type="radio" id="q6_c" name="q6" value="0">
+                <label for="q6_c">Mayor coste de producción</label>
+            </div>
+
+            <div class="form-group">
+                <label>7. ¿Qué proceso se utiliza para tratar las fibras de carbono y mejorar su adhesión a las resinas?</label>
+                <input type="radio" id="q7_a" name="q7" value="0" required>
+                <label for="q7_a">Carbonización</label><br>
+                <input type="radio" id="q7_b" name="q7" value="0">
+                <label for="q7_b">Oxidación</label><br>
+                <input type="radio" id="q7_c" name="q7" value="1">
+                <label for="q7_c">Tratamiento de superficie</label>
+            </div>
+
+            <div class="form-group">
+                <label>8. ¿Qué ventaja adicional ofrece la fibra de carbono en comparación con los metales tradicionales?</label>
+                <input type="radio" id="q8_a" name="q8" value="1" required>
+                <label for="q8_a">Resistencia a la corrosión</label><br>
+                <input type="radio" id="q8_b" name="q8" value="0">
+                <label for="q8_b">Mayor densidad</label><br>
+                <input type="radio" id="q8_c" name="q8" value="0">
+                <label for="q8_c">Menor rigidez</label>
+            </div>
+
+            <div class="form-group">
+                <label>9. ¿Qué tipo de mantenimiento es necesario para la fibra de carbono?</label>
+                <input type="radio" id="q9_a" name="q9" value="0" required>
+                <label for="q9_a">Mantenimiento frecuente</label><br>
+                <input type="radio" id="q9_b" name="q9" value="1">
+                <label for="q9_b">Mantenimiento mínimo</label><br>
+                <input type="radio" id="q9_c" name="q9" value="0">
+                <label for="q9_c">Mantenimiento extensivo</label>
+            </div>
+
+            <div class="form-group">
+                <label>10. ¿Cuál es una de las principales desventajas de la fibra de carbono?</label>
+                <input type="radio" id="q10_a" name="q10" value="1" required>
+                <label for="q10_a">Costo elevado</label><br>
+                <input type="radio" id="q10_b" name="q10" value="0">
+                <label for="q10_b">Poca resistencia</label><br>
+                <input type="radio" id="q10_c" name="q10" value="0">
+                <label for="q10_c">Pesadez</label>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="submitSurvey()">Enviar Encuesta</button>
+            </div>
+
+            <div id="result" class="result" style="display:none;"></div>
+
+            <div class="navigation-buttons">
+                <button class="nav-button red" onclick="location.href='index.html'">Regresar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function submitSurvey() {
+            const form = document.getElementById('surveyForm');
+            const formData = new FormData(form);
+            let score = 0;
+
+            for (let [key, value] of formData.entries()) {
+                if (key.startsWith('q')) {
+                    score += parseInt(value);
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            if (score >= 6) {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. ¡Buen trabajo, has respondido correctamente a 6 o más preguntas sobre fibra de carbono!`;
+                resultDiv.className = 'result green';
+            } else {
+                resultDiv.textContent = `Tu puntuación es ${score} puntos. Has respondido correctamente a 5 o menos preguntas. Considera revisar los conceptos sobre fibra de carbono.`;
+                resultDiv.className = 'result red';
+            }
+        }
+    </script>
+</body>
+</html>

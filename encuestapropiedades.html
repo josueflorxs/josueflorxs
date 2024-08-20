@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Propiedades y Materiales en Química</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #41fd2f;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        h1 {
+            color: #004d40; 
+        }
+        .question {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+        .button.green {
+            background-color: #4caf50; 
+        }
+        .button.green:hover {
+            background-color: #45a049;
+        }
+        .button.red {
+            background-color: #f44336; 
+        }
+        .button.red:hover {
+            background-color: #e53935;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+        .result.correct {
+            background-color: #4caf50; 
+        }
+        .result.incorrect {
+            background-color: #f44336; 
+        }
+        .top-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-buttons">
+            
+        </div>
+        <h1>Encuesta sobre Propiedades y Materiales en Química</h1>
+        <form id="surveyForm">
+            <div id="photo-gallery">
+           
+            <img src="imagenes/bad.gif" alt="Imagen de Química 2" width="300" height="200">
+            
+        </div>
+            <div class="question">
+                <label for="reaccion">1. ¿Cuál de las siguientes sustancias es muy reactiva con el agua?</label>
+                <input type="radio" id="reaccion1" name="reaccion" value="Sodio">
+                <label for="reaccion1">Sodio</label>
+                <input type="radio" id="reaccion2" name="reaccion" value="Hierro">
+                <label for="reaccion2">Hierro</label>
+                <input type="radio" id="reaccion3" name="reaccion" value="Oro">
+                <label for="reaccion3">Oro</label>
+                <input type="radio" id="reaccion4" name="reaccion" value="Plomo">
+                <label for="reaccion4">Plomo</label>
+            </div>
+
+            <div class="question">
+                <label for="acidez">2. ¿Cuál de las siguientes sustancias es una base?</label>
+                <input type="radio" id="acidez1" name="acidez" value="Ácido clorhídrico (HCl)">
+                <label for="acidez1">Ácido clorhídrico (HCl)</label>
+                <input type="radio" id="acidez2" name="acidez" value="Hidróxido de sodio (NaOH)">
+                <label for="acidez2">Hidróxido de sodio (NaOH)</label>
+                <input type="radio" id="acidez3" name="acidez" value="Ácido sulfúrico (H₂SO₄)">
+                <label for="acidez3">Ácido sulfúrico (H₂SO₄)</label>
+                <input type="radio" id="acidez4" name="acidez" value="Ácido acético (CH₃COOH)">
+                <label for="acidez4">Ácido acético (CH₃COOH)</label>
+            </div>
+
+            <div class="question">
+                <label for="oxidacion">3. La oxidación implica:</label>
+                <input type="radio" id="oxidacion1" name="oxidacion" value="Ganancia de electrones">
+                <label for="oxidacion1">Ganancia de electrones</label>
+                <input type="radio" id="oxidacion2" name="oxidacion" value="Pérdida de electrones">
+                <label for="oxidacion2">Pérdida de electrones</label>
+                <input type="radio" id="oxidacion3" name="oxidacion" value="No cambio en electrones">
+                <label for="oxidacion3">No cambio en electrones</label>
+                <input type="radio" id="oxidacion4" name="oxidacion" value="Reacción con oxígeno">
+                <label for="oxidacion4">Reacción con oxígeno</label>
+            </div>
+
+            <div class="question">
+                <label for="combustibilidad">4. ¿Cuál de las siguientes sustancias es altamente combustible?</label>
+                <input type="radio" id="combustibilidad1" name="combustibilidad" value="Metano (CH₄)">
+                <label for="combustibilidad1">Metano (CH₄)</label>
+                <input type="radio" id="combustibilidad2" name="combustibilidad" value="Oro (Au)">
+                <label for="combustibilidad2">Oro (Au)</label>
+                <input type="radio" id="combustibilidad3" name="combustibilidad" value="Plata (Ag)">
+                <label for="combustibilidad3">Plata (Ag)</label>
+                <input type="radio" id="combustibilidad4" name="combustibilidad" value="Cobre (Cu)">
+                <label for="combustibilidad4">Cobre (Cu)</label>
+            </div>
+
+            <div class="question">
+                <label for="estabilidad">5. ¿Qué propiedad describe la tendencia de una sustancia a permanecer sin cambios?</label>
+                <input type="radio" id="estabilidad1" name="estabilidad" value="Reactividad">
+                <label for="estabilidad1">Reactividad</label>
+                <input type="radio" id="estabilidad2" name="estabilidad" value="Estabilidad química">
+                <label for="estabilidad2">Estabilidad química</label>
+                <input type="radio" id="estabilidad3" name="estabilidad" value="Solubilidad">
+                <label for="estabilidad3">Solubilidad</label>
+                <input type="radio" id="estabilidad4" name="estabilidad" value="Densidad">
+                <label for="estabilidad4">Densidad</label>
+            </div>
+
+            <div class="question">
+                <label for="estado">6. El agua puede encontrarse en qué estados de la materia?</label>
+                <input type="radio" id="estado1" name="estado" value="Sólido, líquido y gas">
+                <label for="estado1">Sólido, líquido y gas</label>
+                <input type="radio" id="estado2" name="estado" value="Líquido y gas">
+                <label for="estado2">Líquido y gas</label>
+                <input type="radio" id="estado3" name="estado" value="Sólido y líquido">
+                <label for="estado3">Sólido y líquido</label>
+                <input type="radio" id="estado4" name="estado" value="Solo sólido">
+                <label for="estado4">Solo sólido</label>
+            </div>
+
+            <div class="question">
+                <label for="ebullicion">7. ¿A qué temperatura hierve el agua?</label>
+                <input type="radio" id="ebullicion1" name="ebullicion" value="100°C">
+                <label for="ebullicion1">100°C</label>
+                <input type="radio" id="ebullicion2" name="ebullicion" value="0°C">
+                <label for="ebullicion2">0°C</label>
+                <input type="radio" id="ebullicion3" name="ebullicion" value="50°C">
+                <label for="ebullicion3">50°C</label>
+                <input type="radio" id="ebullicion4" name="ebullicion" value="200°C">
+                <label for="ebullicion4">200°C</label>
+            </div>
+
+            <div class="question">
+                <label for="solubilidad">8. ¿Qué sustancia se disuelve en agua?</label>
+                <input type="radio" id="solubilidad1" name="solubilidad" value="Sal">
+                <label for="solubilidad1">Sal</label>
+                <input type="radio" id="solubilidad2" name="solubilidad" value="Aceite">
+                <label for="solubilidad2">Aceite</label>
+                <input type="radio" id="solubilidad3" name="solubilidad" value="Plomo">
+                <label for="solubilidad3">Plomo</label>
+                <input type="radio" id="solubilidad4" name="solubilidad" value="Vidrio">
+                <label for="solubilidad4">Vidrio</label>
+            </div>
+
+            <div class="question">
+                <label for="densidad">9. ¿Qué propiedad define la relación entre masa y volumen?</label>
+                <input type="radio" id="densidad1" name="densidad" value="Densidad">
+                <label for="densidad1">Densidad</label>
+                <input type="radio" id="densidad2" name="densidad" value="Masa">
+                <label for="densidad2">Masa</label>
+                <input type="radio" id="densidad3" name="densidad" value="Volumen">
+                <label for="densidad3">Volumen</label>
+                <input type="radio" id="densidad4" name="densidad" value="Temperatura">
+                <label for="densidad4">Temperatura</label>
+            </div>
+
+            <div class="question">
+                <label for="formacion">10. ¿Qué tipo de enlace se forma entre átomos en una molécula de agua (H₂O)?</label>
+                <input type="radio" id="formacion1" name="formacion" value="Enlace covalente">
+                <label for="formacion1">Enlace covalente</label>
+                <input type="radio" id="formacion2" name="formacion" value="Enlace iónico">
+                <label for="formacion2">Enlace iónico</label>
+                <input type="radio" id="formacion3" name="formacion" value="Enlace metálico">
+                <label for="formacion3">Enlace metálico</label>
+                <input type="radio" id="formacion4" name="formacion" value="Enlace de hidrógeno">
+                <label for="formacion4">Enlace de hidrógeno</label>
+            </div>
+
+            <div class="question">
+                
+            
+            <div style="text-align: center;">
+                <input type="button" class="button green" value="Enviar Encuesta" onclick="calculateResults()">
+            </div>
+
+            <div id="result" class="result"></div>
+        </form>
+    </div>
+
+    <script>
+        function calculateResults() {
+            const correctAnswers = {
+                reaccion: 'Sodio',
+                acidez: 'Hidróxido de sodio (NaOH)',
+                oxidacion: 'Pérdida de electrones',
+                combustibilidad: 'Metano (CH₄)',
+                estabilidad: 'Estabilidad química',
+                estado: 'Sólido, líquido y gas',
+                ebullicion: '100°C',
+                solubilidad: 'Sal',
+                densidad: 'Densidad',
+                formacion: 'Enlace covalente'
+            };
+
+            let score = 0;
+            for (const [key, value] of Object.entries(correctAnswers)) {
+                const selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+                if (selectedOption && selectedOption.value === value) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            if (score >= 6) {
+                resultDiv.className = 'result correct';
+                resultDiv.textContent = `¡Correcto! Has acertado ${score} de 10 preguntas.`;
+            } else {
+                resultDiv.className = 'result incorrect';
+                resultDiv.textContent = `Lo siento, has acertado ${score} de 10 preguntas.`;
+            }
+        }
+    </script>
+    <a href="index.html" class="button red">Regresar al Archivo</a>
+    <footer>
+        <p>&copy; Flores Islas Ángel Josué</p>
+    </footer>
+</body>
+</html>

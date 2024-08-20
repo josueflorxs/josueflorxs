@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre la Conservación de la Masa en los cambios químicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #68fe3b; 
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        h1 {
+            text-align: center;
+            color: #004d40; 
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            color: #004d40; 
+            font-size: 1.5em;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .question input[type="radio"],
+        .question input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .question textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button.red {
+            background-color: #e53935; 
+        }
+        .button.green {
+            background-color: #43a047; 
+        }
+        .result {
+            display: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .result.green {
+            background-color: #dcedc8; 
+            color: #004d40; 
+        }
+        .result.red {
+            background-color: #ffcdd2; 
+            color: #e53935; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta sobre la Conservación de la Masa En los Cambios Químicos</h1>
+        <div id="photo-gallery">
+            <center><img  width="300" height="200" src="imagenes/jimmy.gif" alt="Imagen de Química 1"></center>
+           
+            
+        </div>
+        <form id="surveyForm">
+            <!-- Pregunta 1 -->
+            <div class="question">
+                <h2>1. ¿Qué establece el principio de conservación de la masa?</h2>
+                <label><input type="radio" name="q1" value="a"> La masa total en un sistema cerrado permanece constante durante los cambios físicos y químicos.</label>
+                <label><input type="radio" name="q1" value="b"> La masa puede ser creada o destruida durante las reacciones químicas.</label>
+                <label><input type="radio" name="q1" value="c"> La masa de los productos es diferente de la de los reactivos.</label>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="question">
+                <h2>2. ¿Qué ocurre con la masa durante un cambio físico?</h2>
+                <label><input type="radio" name="q2" value="a"> La masa cambia de forma pero se conserva.</label>
+                <label><input type="radio" name="q2" value="b"> La masa se destruye durante el cambio.</label>
+                <label><input type="radio" name="q2" value="c"> La masa total se conserva sin importar el estado.</label>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="question">
+                <h2>3. ¿Cuál de los siguientes es un ejemplo de cambio físico?</h2>
+                <label><input type="radio" name="q3" value="a"> La oxidación del hierro.</label>
+                <label><input type="radio" name="q3" value="b"> La fusión del hielo.</label>
+                <label><input type="radio" name="q3" value="c"> La combustión del hidrógeno.</label>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="question">
+                <h2>4. ¿Qué sucede durante una reacción química según la ley de conservación de la masa?</h2>
+                <label><input type="radio" name="q4" value="a"> La masa de los productos es menor que la de los reactivos.</label>
+                <label><input type="radio" name="q4" value="b"> La masa de los reactivos es igual a la masa de los productos.</label>
+                <label><input type="radio" name="q4" value="c"> La masa se pierde durante la reacción.</label>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="question">
+                <h2>5. ¿Cuál es un ejemplo de un cambio químico?</h2>
+                <label><input type="radio" name="q5" value="a"> La evaporación del agua.</label>
+                <label><input type="radio" name="q5" value="b"> La disolución de sal en agua.</label>
+                <label><input type="radio" name="q5" value="c"> La reacción del hidrógeno con oxígeno para formar agua.</label>
+            </div>
+
+           
+            <div class="question">
+                <h2>6. ¿Cómo se utiliza la conservación de la masa en cálculos de estequiometría?</h2>
+                <label><input type="radio" name="q6" value="a"> Para calcular la masa de los productos y reactivos en una reacción química.</label>
+                <label><input type="radio" name="q6" value="b"> Para medir la temperatura durante una reacción.</label>
+                <label><input type="radio" name="q6" value="c"> Para determinar el volumen de un gas.</label>
+            </div>
+
+            
+            <div class="question">
+                <h2>7. ¿Qué se debe hacer si una ecuación química no está balanceada?</h2>
+                <label><input type="radio" name="q7" value="a"> Ajustar los coeficientes para que la masa de los reactivos y productos sea igual.</label>
+                <label><input type="radio" name="q7" value="b"> Cambiar las masas de los reactivos y productos.</label>
+                <label><input type="radio" name="q7" value="c"> Ignorar el desequilibrio y continuar con el cálculo.</label>
+            </div>
+
+            
+            <div class="question">
+                <h2>8. ¿Cuál de los siguientes no es un cambio físico?</h2>
+                <label><input type="radio" name="q8" value="a"> La congelación del agua.</label>
+                <label><input type="radio" name="q8" value="b"> La formación de óxido de hierro.</label>
+                <label><input type="radio" name="q8" value="c"> La ebullición del agua.</label>
+            </div>
+
+            
+            <div class="question">
+                <h2>9. ¿Cómo se verifica la exactitud de los experimentos en un laboratorio?</h2>
+                <label><input type="radio" name="q9" value="a"> Comparando los resultados experimentales con la teoría basada en la conservación de la masa.</label>
+                <label><input type="radio" name="q9" value="b"> Usando diferentes métodos de medición.</label>
+                <label><input type="radio" name="q9" value="c"> Aumentando la cantidad de reactivos.</label>
+            </div>
+
+            
+            <div class="question">
+                <h2>10. ¿Por qué es importante el principio de conservación de la masa en la industria?</h2>
+                <label><input type="radio" name="q10" value="a"> Para diseñar y controlar procesos químicos.</label>
+                <label><input type="radio" name="q10" value="b"> Para aumentar la temperatura de las reacciones.</label>
+                <label><input type="radio" name="q10" value="c"> Para cambiar el color de los productos.</label>
+            </div>
+
+           
+
+            <div class="button-container">
+                <button type="button" class="button green" onclick="submitSurvey()">Enviar</button>
+                <a href="index.html" class="button red">Regresar</a>
+            </div>
+
+            <div id="result" class="result"></div>
+        </form>
+    </div>
+
+    <script>
+        function submitSurvey() {
+          
+            const correctAnswers = {
+                q1: 'a',
+                q2: 'c',
+                q3: 'b',
+                q4: 'b',
+                q5: 'c',
+                q6: 'a',
+                q7: 'a',
+                q8: 'b',
+                q9: 'a',
+                q10: 'a'
+            };
+
+            let score = 0;
+            const formElements = document.querySelectorAll('#surveyForm input[type="radio"]:checked');
+
+            formElements.forEach(input => {
+                const question = input.name;
+                const answer = input.value;
+
+                if (correctAnswers[question] === answer) {
+                    score++;
+                }
+            });
+
+            const resultDiv = document.getElementById('result');
+
+            if (score >= 6) {
+                resultDiv.innerHTML = `<p>¡Felicidades! Has respondido correctamente ${score} preguntas. Tu puntuación es buena.</p>`;
+                resultDiv.className = 'result green';
+            } else {
+                resultDiv.innerHTML = `<p>Has respondido correctamente ${score} preguntas. Intenta estudiar más sobre el tema.</p>`;
+                resultDiv.className = 'result red';
+            }
+            resultDiv.style.display = 'block';
+        }
+    </script>
+    <footer>
+        <p>&copy; Flores Islas Ángel Josué</p>
+    </footer>
+</body>
+</html>
